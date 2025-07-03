@@ -407,13 +407,19 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 3rem;
-  justify-items: center;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.skills-row {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .skill-card {
@@ -427,21 +433,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-/* Center the last 2 skill cards when they are in the second row */
-.skills-grid .skill-card:nth-child(4) {
-  grid-column: 2 / 3;
-  grid-row: 2;
-  justify-self: end;
-  margin-right: 1rem;
-}
-
-.skills-grid .skill-card:nth-child(5) {
-  grid-column: 2 / 3;
-  grid-row: 2;
-  justify-self: start;
-  margin-left: 1rem;
+  flex: 1;
+  max-width: 370px;
 }
 
 .skill-card:hover {
@@ -659,16 +652,12 @@ body {
 
 /* Responsive Design */
 @media (min-width: 1000px) {
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1200px;
-  }
+  /* Default layout already defined above */
 }
 
 @media (min-width: 600px) and (max-width: 999px) {
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 800px;
+  .skill-card {
+    max-width: 320px;
   }
 }
 
@@ -710,8 +699,14 @@ body {
     font-size: 5rem;
   }
   
-  .skills-grid {
-    grid-template-columns: 1fr;
+  .skills-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .skill-card {
+    width: 100%;
+    max-width: 350px;
   }
   
   .projects-grid {

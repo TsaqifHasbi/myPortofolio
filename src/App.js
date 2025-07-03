@@ -112,7 +112,7 @@ function App() {
       {/* Navigation */}
       <nav className="navbar">
         <div className="nav-container">
-          <div className="nav-brand">{t.name}</div>
+          <div className="nav-brand">Tsaqif Hasbi Aghna Syarief</div>
           <div className="nav-menu">
             <a href="#about" className="nav-link">About</a>
             <a href="#skills" className="nav-link">Skills</a>
@@ -171,16 +171,32 @@ function App() {
         <div className="container">
           <h3 className="section-title">{t.skillsTitle}</h3>
           <div className="skills-grid">
-            {t.skills.map((skill, idx) => (
-              <div className="skill-card" key={idx}>
-                <div className="skill-icon">
-                  {idx === 0 ? <FaPalette /> : idx === 1 ? <FaCode /> : idx === 2 ? <FaBolt /> : idx === 3 ? <FaGitAlt /> : <FaBullhorn />}
+            {/* First row - 3 cards */}
+            <div className="skills-row">
+              {t.skills.slice(0, 3).map((skill, idx) => (
+                <div className="skill-card" key={idx}>
+                  <div className="skill-icon">
+                    {idx === 0 ? <FaPalette /> : idx === 1 ? <FaCode /> : <FaBolt />}
+                  </div>
+                  <h4 className="skill-title">{skill.title}</h4>
+                  <p className="skill-desc">{skill.desc}</p>
+                  <div className="skill-tech">{skill.tech}</div>
                 </div>
-                <h4 className="skill-title">{skill.title}</h4>
-                <p className="skill-desc">{skill.desc}</p>
-                <div className="skill-tech">{skill.tech}</div>
-              </div>
-            ))}
+              ))}
+            </div>
+            {/* Second row - 2 cards centered */}
+            <div className="skills-row">
+              {t.skills.slice(3, 5).map((skill, idx) => (
+                <div className="skill-card" key={idx + 3}>
+                  <div className="skill-icon">
+                    {idx === 0 ? <FaGitAlt /> : <FaBullhorn />}
+                  </div>
+                  <h4 className="skill-title">{skill.title}</h4>
+                  <p className="skill-desc">{skill.desc}</p>
+                  <div className="skill-tech">{skill.tech}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
