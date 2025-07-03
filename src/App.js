@@ -14,7 +14,8 @@ import {
   FaMoon,
   FaUser,
   FaGitAlt,
-  FaBullhorn
+  FaBullhorn,
+  FaDatabase
 } from 'react-icons/fa';
 
 const content = {
@@ -41,6 +42,11 @@ const content = {
         title: 'Programming Logic', 
         desc: 'Developing efficient algorithms and solutions using various programming languages.',
         tech: 'C, C++, Python, Java (OOP)'
+      },
+      { 
+        title: 'Database & SQL', 
+        desc: 'Designing and managing databases with efficient query optimization and data modeling.',
+        tech: 'MySQL, PostgreSQL, MongoDB, SQL'
       },
       { 
         title: 'Version Control', 
@@ -82,6 +88,11 @@ const content = {
         title: 'Pemrograman Logika', 
         desc: 'Mengembangkan algoritma dan solusi yang efisien menggunakan berbagai bahasa pemrograman.',
         tech: 'C, C++, Python, Java (OOP)'
+      },
+      { 
+        title: 'Database & SQL', 
+        desc: 'Merancang dan mengelola database dengan optimisasi query yang efisien dan pemodelan data.',
+        tech: 'MySQL, PostgreSQL, MongoDB, SQL'
       },
       { 
         title: 'Version Control', 
@@ -184,12 +195,12 @@ function App() {
                 </div>
               ))}
             </div>
-            {/* Second row - 2 cards centered */}
+            {/* Second row - 3 cards centered */}
             <div className="skills-row">
-              {t.skills.slice(3, 5).map((skill, idx) => (
+              {t.skills.slice(3, 6).map((skill, idx) => (
                 <div className="skill-card" key={idx + 3}>
                   <div className="skill-icon">
-                    {idx === 0 ? <FaGitAlt /> : <FaBullhorn />}
+                    {idx === 0 ? <FaDatabase /> : idx === 1 ? <FaGitAlt /> : <FaBullhorn />}
                   </div>
                   <h4 className="skill-title">{skill.title}</h4>
                   <p className="skill-desc">{skill.desc}</p>
