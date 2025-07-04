@@ -10,6 +10,7 @@ import {
   FaEnvelope,
   FaLinkedin,
   FaGithub,
+  FaInstagram,
   FaSun,
   FaMoon,
   FaUser,
@@ -34,33 +35,85 @@ const content = {
     experienceTitle: 'Experience',
     experience: [
       {
-        title: 'BEM FT Unsoed',
-        position: 'Staff of Interest and Talent Ministry',
-        year: '2024',
-        location: 'Purwokerto, Indonesia',
-        description: 'Leading cross-functional teams of Sr. developers and designers to deliver innovative solutions for student interests and talents development.',
+        title: 'SARI Teknologi',
+        position: 'Search Engine Optimization Team Lead',
+        year: 'Feb 2022 - Jul 2022',
+        location: 'Jakarta Barat, Jakarta Raya, Indonesia',
+        description: 'An SEO Team Lead is someone who leads a team in developing and implementing search engine optimization strategies to improve online visibility and organic traffic.',
         achievements: [
-          'Increased student engagement by 40% through agile implementation',
-          'Managed 10+ student talent across 8 different categories',
-          'Developed student capabilities to drive achievement improvement',
-          'Reduced cost optimization by 25% through improved communication processes',
-          'Mentored 12 junior project managers'
+          'Strategy Development: Designing effective SEO strategies',
+          'Analysis and Reporting: Analyzing site performance and reporting results',
+          'Keyword Research: Identifying relevant keywords',
+          'On-Page and Off-Page Optimization: Optimizing site pages and building backlinks',
+          'Team Management: Leading and training SEO team',
+          'Cross-Team Collaboration: Working with marketing and web development teams',
+          'Trend Monitoring: Following latest developments in SEO',
+          'Project Management: Managing SEO projects from start to finish'
+        ],
+        technologies: ['SEO', 'Digital Marketing', 'Team Leadership', 'Analytics']
+      },
+      {
+        title: 'BEM FT UNSOED',
+        position: 'Staff Kementerian Minat dan Bakat',
+        year: 'Mar 2024 - Des 2024',
+        location: 'Purbalingga, Jawa Tengah, Indonesia',
+        description: 'As Staff of Interest and Talent Ministry in Faculty of Engineering Student Executive Board UNSOED (BEM FT UNSOED), I contributed in planning and executing various interest and talent development programs for Faculty of Engineering students Universitas Jenderal Soedirman.',
+        achievements: [
+          'Identified student potential for competition preparation',
+          'Organized annual programs such as POST and other activities',
+          'Created proposals for sponsorship and funding',
+          'Coordinated FT in PORSOED event',
+          'Guided students to face competitions at university and inter-university levels',
+          'Received Achievement Staff Of The Month in June 2024 for hard work and dedication'
         ],
         technologies: ['Event Management', 'Leadership', 'Project Management']
       },
       {
-        title: 'HMIF Unsoed',
-        position: 'Head of Student Development and Resource Division',
-        year: '2025 - Present',
-        location: 'Purwokerto, Indonesia',
-        description: 'Managing informatics student development programs and human resources optimization.',
+        title: 'BEM FT UNSOED',
+        position: 'Faculty of Engineering Coordinator for the PORSOED Event',
+        year: 'Sep 2024 - Nov 2024',
+        location: 'Purwokerto, Jawa Tengah, Indonesia',
+        description: 'As Faculty Coordinator in PORSOED (Pekan Olahraga Soedirman) representing BEM FT UNSOED, I was responsible for full coordination and contingent management of Faculty of Engineering Universitas Jenderal Soedirman in following inter-faculty sports competition.',
         achievements: [
-          'Developed comprehensive student development strategies',
-          'Improved student engagement in academic and non-academic activities',
-          'Coordinated training programs for skill enhancement',
-          'Established mentorship programs for junior students'
+          'Successfully coordinated 40+ athletes and officials from Faculty of Engineering in 16 sports branches',
+          'Delivered Faculty of Engineering to rank 2nd after accumulating PORSOED 2024 points',
+          'Developed effective strategies and motivated athletes to increase medal acquisition',
+          'Completed all logistic and technical preparations professionally and on time',
+          'Strengthened solidarity, team spirit, and pride of Faculty of Engineering students'
         ],
-        technologies: ['Student Development', 'Human Resources', 'Training Programs']
+        technologies: ['Communication', 'Coordination Skills', 'Event Management']
+      },
+      {
+        title: 'HMIF UNSOED',
+        position: 'Head of Human Resource Development Division',
+        year: 'Mar 2025 - Present',
+        location: 'Purbalingga, Jawa Tengah, Indonesia',
+        description: 'As Head of Human Resource Development Division in HMIF UNSOED (Himpunan Mahasiswa Informatika), I lead the division responsible for developing human resources, organizing training programs, and enhancing the skills and capabilities of Informatics students.',
+        achievements: [
+          'Successfully designed and implemented comprehensive training programs for Informatics students',
+          'Organized technical workshops on programming, web development, and emerging technologies',
+          'Developed mentorship programs pairing senior and junior students for knowledge transfer',
+          'Coordinated professional development seminars with industry experts and alumni',
+          'Established partnerships with tech companies for internship and job placement opportunities',
+          'Led recruitment and orientation programs for new HMIF members',
+          'Implemented skill assessment and certification tracking system for members'
+        ],
+        technologies: ['Leadership', 'Training Management', 'Human Resource Development', 'Program Coordination']
+      },
+      {
+        title: 'Universitas Jenderal Soedirman',
+        position: 'Data Structure Laboratory Assistant Informatics 2025',
+        year: 'Mar 2025 - Present',
+        location: 'Purbalingga, Jawa Tengah, Indonesia',
+        description: 'As a Data Structure Laboratory Assistant, I assist faculty instructors in conducting practicum and guide students in understanding basic concepts and implementation of data structures using programming languages.',
+        achievements: [
+          'Successfully helped students understand fundamental data structure concepts and implementations',
+          'Assisted students in solving practicum problems and provided programming guidance',
+          'Objectively examined and evaluated student practicum results',
+          'Provided solutions and additional explanations to strengthen student understanding',
+          'Maintained order and continuity during practicum sessions'
+        ],
+        technologies: ['C (Programming Language)', 'Communication', 'Teaching']
       }
     ],
     education: [
@@ -152,33 +205,84 @@ const content = {
     experienceTitle: 'Pengalaman',
     experience: [
       {
-        title: 'BEM FT Unsoed',
-        position: 'Staff Kementerian Minat dan Bakat',
-        year: '2024',
-        location: 'Purwokerto, Indonesia',
-        description: 'Memimpin tim lintas fungsi developer senior dan desainer untuk memberikan solusi inovatif dalam pengembangan minat dan bakat mahasiswa.',
+        title: 'SARI Teknologi',
+        position: 'Search Engine Optimization Team Lead',
+        year: 'Feb 2022 - Jul 2022',
+        location: 'Jakarta Barat, Jakarta Raya, Indonesia',
+        description: 'Seorang SEO Team Lead adalah seseorang yang memimpin tim dalam mengembangkan dan melaksanakan strategi optimasi mesin pencari untuk meningkatkan visibilitas online dan lalu lintas organik.',
         achievements: [
-          'Meningkatkan keterlibatan mahasiswa sebesar 40% melalui implementasi agile',
-          'Mengelola 10+ bakat mahasiswa di 8 kategori berbeda',
-          'Mengembangkan kemampuan mahasiswa untuk mendorong peningkatan prestasi',
-          'Mengurangi optimisasi biaya sebesar 25% melalui proses komunikasi yang lebih baik',
-          'Membimbing 12 junior project manager'
+          'Pengembangan Strategi: Merancang strategi SEO yang efektif',
+          'Analisis dan Pelaporan: Menganalisis performa situs dan melaporkan hasilnya',
+          'Penelitian Kata Kunci: Mengidentifikasi kata kunci yang relevan',
+          'Optimasi On-Page dan Off-Page: Mengoptimalkan halaman situs dan membangun tautan balik',
+          'Pengelolaan Tim: Memimpin dan melatih tim SEO',
+          'Kolaborasi Antar Tim: Bekerja sama dengan tim pemasaran dan pengembang web',
+          'Pemantauan Tren: Mengikuti perkembangan terbaru dalam SEO',
+          'Manajemen Proyek: Mengelola proyek SEO dari awal hingga akhir'
+        ],
+        technologies: ['SEO', 'Pemasaran Digital', 'Kepemimpinan Tim', 'Analytics']
+      },
+      {
+        title: 'BEM FT UNSOED',
+        position: 'Staff Kementerian Minat dan Bakat',
+        year: 'Mar 2024 - Des 2024',
+        location: 'Purbalingga, Jawa Tengah, Indonesia',
+        description: 'Sebagai Staff Minat dan Bakat di Badan Eksekutif Mahasiswa Fakultas Teknik UNSOED (BEM FT UNSOED), saya berkontribusi dalam merancang dan melaksanakan berbagai program pengembangan minat dan bakat mahasiswa Fakultas Teknik Universitas Jenderal Soedirman.',
+        achievements: [
+          'Mengidentifikasi potensi mahasiswa untuk persiapan lomba',
+          'Menyusun program tahunan seperti POST dan kegiatan lainnya',
+          'Membuat proposal untuk sponsorship dan pendanaan',
+          'Koordinator FT dalam ajang PORSOED',
+          'Membimbing mahasiswa menghadapi kompetisi di tingkat universitas dan antar-universitas',
+          'Mendapat Achivment Staff Of The Month pada bulan Juni 2024 karena kerja keras dan dedikasinya pada bulan itu'
         ],
         technologies: ['Manajemen Acara', 'Kepemimpinan', 'Manajemen Proyek']
       },
       {
-        title: 'HMIF Unsoed',
-        position: 'Kepala Divisi Pengembangan dan Sumber Daya Mahasiswa',
-        year: '2025 - Sekarang',
-        location: 'Purwokerto, Indonesia',
-        description: 'Mengelola program pengembangan mahasiswa informatika dan optimisasi sumber daya manusia.',
+        title: 'BEM FT UNSOED',
+        position: 'Koordinator Fakultas untuk Acara PORSOED',
+        year: 'Sep 2024 - Nov 2024',
+        location: 'Purwokerto, Jawa Tengah, Indonesia',
+        description: 'Sebagai Koordinator Fakultas dalam PORSOED (Pekan Olahraga Soedirman) mewakili BEM FT UNSOED, saya bertanggung jawab penuh atas koordinasi dan manajemen kontingen Fakultas Teknik Universitas Jenderal Soedirman dalam mengikuti kompetisi olahraga antar fakultas.',
         achievements: [
-          'Mengembangkan strategi pengembangan mahasiswa yang komprehensif',
-          'Meningkatkan keterlibatan mahasiswa dalam kegiatan akademik dan non-akademik',
-          'Mengkoordinasikan program pelatihan untuk peningkatan keterampilan',
-          'Mendirikan program mentorship untuk mahasiswa junior'
+          'Berhasil mengkoordinasikan 40+ atlet dan official dari Fakultas Teknik dalam 16 cabang olahraga',
+          'Mengantarkan Fakultas Teknik meraih peringkat 2 setelah akumulasi poin PORSOED 2024',
+          'Menyusun strategi efektif dan memotivasi atlet sehingga meningkatkan jumlah perolehan medali',
+          'Menyelesaikan seluruh persiapan logistik dan teknis secara profesional dan tepat waktu',
+          'Memperkuat solidaritas, semangat sportivitas, dan kebanggaan mahasiswa Fakultas Teknik'
         ],
-        technologies: ['Pengembangan SDM', 'Manajemen Sumber Daya', 'Program Pelatihan']
+        technologies: ['Komunikasi', 'Keterampilan Koordinasi', 'Manajemen Acara']
+      },
+      {
+        title: 'HMIF UNSOED',
+        position: 'Ketua Divisi Pengembangan Sumber Daya Manusia',
+        year: 'Mar 2025 - Sekarang',
+        location: 'Purbalingga, Jawa Tengah, Indonesia',
+        description: 'Sebagai Ketua Divisi Pengembangan Sumber Daya Manusia di HMIF UNSOED (Himpunan Mahasiswa Informatika), saya memimpin divisi yang bertanggung jawab mengembangkan sumber daya manusia, menyelenggarakan program pelatihan, dan meningkatkan kemampuan mahasiswa Informatika.',
+        achievements: [
+          'Berhasil merancang dan mengimplementasikan program pelatihan komprehensif untuk mahasiswa Informatika',
+          'Menyelenggarakan workshop teknis tentang pemrograman, pengembangan web, dan teknologi terkini',
+          'Mengembangkan program mentoring yang memadukan mahasiswa senior dan junior untuk transfer knowledge',
+          'Mengkoordinasikan seminar pengembangan profesional dengan pakar industri dan alumni',
+          'Membangun kemitraan dengan perusahaan teknologi untuk peluang magang dan penempatan kerja',
+          'Memimpin program rekrutmen dan orientasi anggota baru HMIF',
+          'Mengimplementasikan sistem penilaian kemampuan dan tracking sertifikasi untuk anggota'
+        ],
+        technologies: ['Kepemimpinan', 'Manajemen Pelatihan', 'Pengembangan SDM', 'Koordinasi Program']
+      },
+      {
+        title: 'Universitas Jenderal Soedirman',
+        position: 'Asisten Laboratorium Struktur Data Informatika 2025',
+        year: 'Mar 2025 - Sekarang',
+        location: 'Purbalingga, Jawa Tengah, Indonesia',
+        description: 'Sebagai Asisten Laboratorium Struktur Data, saya membantu dosen pengampu dalam pelaksanaan praktikum dan membimbing mahasiswa dalam memahami konsep dasar dan implementasi struktur data menggunakan bahasa pemrograman.',
+        achievements: [
+          'Berhasil membantu mahasiswa memahami konsep dasar struktur data dan implementasinya dengan baik',
+          'Menyusun materi praktikum yang sistematis dan mudah dipahami, meningkatkan efektivitas pembelajaran',
+          'Memberikan bimbingan intensif sehingga mahasiswa lebih percaya diri dalam menyelesaikan soal praktikum dan tugas akhir',
+          'Mendapatkan umpan balik positif dari dosen pengampu dan mahasiswa atas peran aktif dalam mendukung pembelajaran praktikum'
+        ],
+        technologies: ['Bahasa Pemrograman C', 'Komunikasi', 'Pengajaran']
       }
     ],
     education: [
@@ -305,7 +409,7 @@ function App() {
           <div className="hero-visual">
             <div className="hero-avatar">
               <img 
-                src="/tsaqif.jpg" 
+                src="/tsf.jpg" 
                 alt="Tsaqif Hasbi Aghna Syarief" 
                 className="avatar-image"
                 onError={(e) => {
@@ -471,11 +575,14 @@ function App() {
             <a href="mailto:tsaqifhasbi17@gmail.com" className="contact-link">
               <FaEnvelope /> Email
             </a>
-            <a href="https://www.linkedin.com/in/tsaqifhasbi" className="contact-link">
+            <a href="https://www.linkedin.com/in/tsaqifhasbi" className="contact-link" target="_blank" rel="noopener noreferrer">
               <FaLinkedin /> LinkedIn
             </a>
-            <a href="https://github.com/TsaqifHasbi" className="contact-link">
+            <a href="https://github.com/TsaqifHasbi" className="contact-link" target="_blank" rel="noopener noreferrer">
               <FaGithub /> GitHub
+            </a>
+            <a href="https://www.instagram.com/tsaqifhsb_" className="contact-link" target="_blank" rel="noopener noreferrer">
+              <FaInstagram /> Instagram
             </a>
           </div>
         </div>
