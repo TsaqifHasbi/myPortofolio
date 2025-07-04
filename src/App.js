@@ -15,7 +15,9 @@ import {
   FaUser,
   FaGitAlt,
   FaBullhorn,
-  FaDatabase
+  FaDatabase,
+  FaSearch,
+  FaMicrosoft
 } from 'react-icons/fa';
 
 const content = {
@@ -23,7 +25,7 @@ const content = {
     name: 'Tsaqif Hasbi Aghna Syarief',
     title: 'Portfolio',
     subtitle: 'Creative Developer & Designer',
-    description: 'Welcome to my modern portfolio! I am passionate about UI/UX design, web development, and logical programming.',
+    description: 'Welcome to my portfolio! I am passionate about UI/UX design, web development, and logical programming.',
     aboutTitle: 'About Me',
     aboutDesc: 'I am a creative developer with a passion for creating beautiful and functional digital experiences. I specialize in UI/UX design, web development, and logical programming.',
     skillsTitle: 'My Skills',
@@ -31,7 +33,7 @@ const content = {
       { 
         title: 'UI/UX Design', 
         desc: 'Creating intuitive and beautiful user interfaces using Figma, Adobe XD, and modern design principles.',
-        tech: 'Figma, Adobe XD, Prototyping'
+        tech: 'Figma, Prototyping'
       },
       { 
         title: 'Web Development', 
@@ -46,7 +48,7 @@ const content = {
       { 
         title: 'Database & SQL', 
         desc: 'Designing and managing databases with efficient query optimization and data modeling.',
-        tech: 'MySQL, PostgreSQL, MongoDB, SQL'
+        tech: 'MySQL, SQL'
       },
       { 
         title: 'Version Control', 
@@ -56,7 +58,17 @@ const content = {
       { 
         title: 'Digital Marketing', 
         desc: 'Developing comprehensive digital marketing strategies including social media management, SEO optimization, and Google advertising campaigns.',
-        tech: 'Social Media, SEO, Google Ads, Analytics'
+        tech: 'Social Media, Google Ads, Analytics'
+      },
+      { 
+        title: 'SEO', 
+        desc: 'Optimizing websites for search engines to improve visibility, ranking, and organic traffic through keyword research and technical optimization.',
+        tech: 'Keyword Research, On-Page SEO, Analytics'
+      },
+      { 
+        title: 'Microsoft Office', 
+        desc: 'Proficient in Microsoft Office suite for productivity, data analysis, and professional documentation with advanced features and automation.',
+        tech: 'Word, Excel, PowerPoint, Outlook'
       },
     ],
     projectsTitle: 'Featured Projects',
@@ -69,7 +81,7 @@ const content = {
     name: 'Tsaqif Hasbi Aghna Syarief',
     title: 'Portofolio',
     subtitle: 'Creative Developer & Designer',
-    description: 'Selamat datang di portofolio modern saya! Saya antusias dalam desain UI/UX, pengembangan web, dan pemrograman logika.',
+    description: 'Selamat datang di portofolio saya! Saya antusias dalam desain UI/UX, pengembangan web, dan pemrograman logika.',
     aboutTitle: 'Tentang Saya',
     aboutDesc: 'Saya adalah seorang developer kreatif dengan passion untuk menciptakan pengalaman digital yang indah dan fungsional. Saya mengkhususkan diri dalam desain UI/UX, pengembangan web, dan pemrograman logika.',
     skillsTitle: 'Keahlian Saya',
@@ -92,7 +104,7 @@ const content = {
       { 
         title: 'Database & SQL', 
         desc: 'Merancang dan mengelola database dengan optimisasi query yang efisien dan pemodelan data.',
-        tech: 'MySQL, PostgreSQL, MongoDB, SQL'
+        tech: 'MySQL, SQL'
       },
       { 
         title: 'Version Control', 
@@ -102,7 +114,17 @@ const content = {
       { 
         title: 'Digital Marketing', 
         desc: 'Mengembangkan strategi pemasaran digital yang komprehensif termasuk manajemen media sosial, optimisasi SEO, dan kampanye iklan Google.',
-        tech: 'Social Media, SEO, Google Ads, Analytics'
+        tech: 'Social Media, Google Ads, Analytics'
+      },
+      { 
+        title: 'SEO', 
+        desc: 'Mengoptimalkan website untuk mesin pencari guna meningkatkan visibilitas, ranking, dan traffic organik melalui riset kata kunci dan optimisasi teknis.',
+        tech: 'Keyword Research, On-Page SEO, Analytics'
+      },
+      { 
+        title: 'Microsoft Office', 
+        desc: 'Mahir menggunakan suite Microsoft Office untuk produktivitas, analisis data, dan dokumentasi profesional dengan fitur-fitur canggih dan otomasi.',
+        tech: 'Word, Excel, PowerPoint, Outlook'
       },
     ],
     projectsTitle: 'Proyek Unggulan',
@@ -182,25 +204,18 @@ function App() {
         <div className="container">
           <h3 className="section-title">{t.skillsTitle}</h3>
           <div className="skills-grid">
-            {/* First row - 3 cards */}
             <div className="skills-row">
-              {t.skills.slice(0, 3).map((skill, idx) => (
+              {t.skills.map((skill, idx) => (
                 <div className="skill-card" key={idx}>
                   <div className="skill-icon">
-                    {idx === 0 ? <FaPalette /> : idx === 1 ? <FaCode /> : <FaBolt />}
-                  </div>
-                  <h4 className="skill-title">{skill.title}</h4>
-                  <p className="skill-desc">{skill.desc}</p>
-                  <div className="skill-tech">{skill.tech}</div>
-                </div>
-              ))}
-            </div>
-            {/* Second row - 3 cards centered */}
-            <div className="skills-row">
-              {t.skills.slice(3, 6).map((skill, idx) => (
-                <div className="skill-card" key={idx + 3}>
-                  <div className="skill-icon">
-                    {idx === 0 ? <FaDatabase /> : idx === 1 ? <FaGitAlt /> : <FaBullhorn />}
+                    {idx === 0 ? <FaPalette /> : 
+                     idx === 1 ? <FaCode /> : 
+                     idx === 2 ? <FaBolt /> : 
+                     idx === 3 ? <FaDatabase /> : 
+                     idx === 4 ? <FaGitAlt /> : 
+                     idx === 5 ? <FaBullhorn /> :
+                     idx === 6 ? <FaSearch /> :
+                     <FaMicrosoft />}
                   </div>
                   <h4 className="skill-title">{skill.title}</h4>
                   <p className="skill-desc">{skill.desc}</p>
