@@ -20,7 +20,8 @@ import {
   FaGraduationCap,
   FaBrain,
   FaCertificate,
-  FaServer
+  FaServer,
+  FaReact
 } from 'react-icons/fa';
 
 const content = {
@@ -153,20 +154,40 @@ const content = {
         desc: 'Creating intuitive and beautiful user interfaces using Figma, Canva, and modern design principles.',
         techs: [
           { name: 'Figma', level: 90 },
-          { name: 'Canva', level: 85 },
           { name: 'Prototyping', level: 88 },
+          { name: 'Canva', level: 85 },
           { name: 'Adobe Illustrator', level: 82 }
         ]
       },
       { 
         title: 'Web Development', 
-        desc: 'Building responsive and interactive websites using modern web technologies and frameworks.',
+        desc: 'Building responsive and interactive websites using fundamental web technologies and core programming languages.',
         techs: [
           { name: 'HTML', level: 95 },
           { name: 'CSS', level: 92 },
           { name: 'JavaScript', level: 88 },
+          { name: 'DOM Manipulation', level: 85 },
+          { name: 'Web APIs', level: 80 }
+        ]
+      },
+      { 
+        title: 'JavaScript Frameworks', 
+        desc: 'Building dynamic and interactive web applications using modern JavaScript frameworks and libraries for component-based development.',
+        techs: [
           { name: 'ReactJS', level: 85 },
-          { name: 'VueJS', level: 50 }
+          { name: 'VueJS', level: 50 },
+          { name: 'Component Architecture', level: 82 },
+          { name: 'State Management', level: 78 }
+        ]
+      },
+      { 
+        title: 'Frontend Frameworks', 
+        desc: 'Building modern and responsive user interfaces using popular CSS frameworks and utility-first libraries for rapid development.',
+        techs: [
+          { name: 'Bootstrap', level: 88 },
+          { name: 'Tailwind CSS', level: 85 },
+          { name: 'Bulma', level: 15 },
+          { name: 'Material-UI', level: 10 }
         ]
       },
       { 
@@ -420,23 +441,43 @@ const content = {
     skills: [
       { 
         title: 'Desain UI/UX', 
-        desc: 'Menciptakan antarmuka pengguna yang intuitif dan indah menggunakan Figma, Adobe XD, dan prinsip desain modern.',
+        desc: 'Menciptakan antarmuka pengguna yang intuitif dan indah menggunakan Figma, Canva, dan prinsip desain modern.',
         techs: [
           { name: 'Figma', level: 90 },
-          { name: 'Canva', level: 85 },
           { name: 'Prototyping', level: 88 },
+          { name: 'Canva', level: 85 },
           { name: 'Adobe Illustrator', level: 82 }
         ]
       },
       { 
         title: 'Pengembangan Web', 
-        desc: 'Membangun website responsif dan interaktif menggunakan teknologi web modern dan framework.',
+        desc: 'Membangun website responsif dan interaktif menggunakan teknologi web fundamental dan bahasa pemrograman inti.',
         techs: [
           { name: 'HTML', level: 95 },
           { name: 'CSS', level: 92 },
           { name: 'JavaScript', level: 88 },
+          { name: 'Manipulasi DOM', level: 85 },
+          { name: 'Web APIs', level: 80 }
+        ]
+      },
+      { 
+        title: 'JavaScript Frameworks', 
+        desc: 'Membangun aplikasi web yang dinamis dan interaktif menggunakan framework JavaScript modern dan library untuk pengembangan berbasis komponen.',
+        techs: [
           { name: 'ReactJS', level: 85 },
-          { name: 'VueJS', level: 50 }
+          { name: 'VueJS', level: 50 },
+          { name: 'Arsitektur Komponen', level: 82 },
+          { name: 'State Management', level: 78 }
+        ]
+      },
+      { 
+        title: 'Framework Frontend', 
+        desc: 'Membangun antarmuka pengguna yang modern dan responsif menggunakan framework CSS populer dan utility-first libraries untuk pengembangan yang cepat.',
+        techs: [
+          { name: 'Bootstrap', level: 88 },
+          { name: 'Tailwind CSS', level: 85 },
+          { name: 'Bulma', level: 15 },
+          { name: 'Material-UI', level: 10 }
         ]
       },
       { 
@@ -580,7 +621,7 @@ function App() {
         }
       },
       {
-        threshold: 0.3,
+        threshold: 0.1, // Lowered threshold for easier triggering
       }
     );
 
@@ -589,10 +630,16 @@ function App() {
       observer.observe(currentRef);
     }
 
+    // Fallback: Set skillsVisible to true after 2 seconds
+    const fallbackTimer = setTimeout(() => {
+      setSkillsVisible(true);
+    }, 2000);
+
     return () => {
       if (currentRef) {
         observer.unobserve(currentRef);
       }
+      clearTimeout(fallbackTimer);
     };
   }, []);
 
@@ -794,12 +841,14 @@ function App() {
                   <div className="skill-icon">
                     {idx === 0 ? <FaPalette /> : 
                      idx === 1 ? <FaCode /> : 
-                     idx === 2 ? <FaServer /> : 
-                     idx === 3 ? <FaBrain /> : 
-                     idx === 4 ? <FaDatabase /> : 
-                     idx === 5 ? <FaGitAlt /> : 
-                     idx === 6 ? <FaBullhorn /> :
-                     idx === 7 ? <FaSearch /> :
+                     idx === 2 ? <FaReact /> : 
+                     idx === 3 ? <FaRocket /> : 
+                     idx === 4 ? <FaServer /> : 
+                     idx === 5 ? <FaBrain /> : 
+                     idx === 6 ? <FaDatabase /> : 
+                     idx === 7 ? <FaGitAlt /> : 
+                     idx === 8 ? <FaBullhorn /> :
+                     idx === 9 ? <FaSearch /> :
                      <FaMicrosoft />}
                   </div>
                   <h4 className="skill-title">{skill.title}</h4>
@@ -811,11 +860,22 @@ function App() {
                           <span className="tech-name">{tech.name}</span>
                           <span className="tech-level">{tech.level}%</span>
                         </div>
-                        <div className="tech-progress-bar">
+                        <div className="tech-progress-bar" style={{
+                          width: '100%',
+                          height: '8px',
+                          backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                          borderRadius: '4px',
+                          overflow: 'hidden',
+                          marginTop: '4px'
+                        }}>
                           <div 
                             className={`tech-progress-fill ${skillsVisible ? 'animate' : ''}`}
                             style={{ 
                               width: skillsVisible ? `${tech.level}%` : '0%',
+                              height: '100%',
+                              backgroundColor: '#007bff',
+                              borderRadius: '4px',
+                              transition: 'width 1s ease-in-out',
                               transitionDelay: `${(idx * 4 + techIdx) * 0.1}s`
                             }}
                           />
