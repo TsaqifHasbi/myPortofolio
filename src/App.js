@@ -20,8 +20,7 @@ import {
   FaGraduationCap,
   FaBrain,
   FaCertificate,
-  FaServer,
-  // FaCalendarAlt
+  FaServer
 } from 'react-icons/fa';
 
 const content = {
@@ -29,9 +28,11 @@ const content = {
     name: 'Tsaqif Hasbi Aghna Syarief',
     title: 'Portfolio',
     subtitle: 'Informatics Student & Tech Enthusiast',
-    description: 'Passionate Informatics Engineering student at Universitas Jenderal Soedirman with expertise in software development, data structures, and digital marketing. Currently serving as Head of Human Resource Development Division at HMIF UNSOED and Laboratory Assistant for Data Structure course.',
+    description: 'Passionate Informatics student at Jenderal Soedirman University with expertise in software development, data structures, and digital marketing. Currently serving as Head of Human Resource Development Division at HMIF UNSOED and Laboratory Assistant for Data Structure course.',
     aboutTitle: 'About Me',
-    aboutDesc: 'I am an ambitious Informatics Engineering student with a strong foundation in programming, algorithm design, and digital marketing. My leadership experience includes managing human resource development programs and coordinating major university events. I combine technical skills with strategic thinking to create innovative solutions.',
+    aboutDesc: 'I am an ambitious Informatics student with a strong foundation in programming, algorithm design, and digital marketing. My leadership experience includes managing human resource development programs and coordinating major university events. I combine technical skills with strategic thinking to create innovative solutions.',
+    whoAmI: "I'm a passionate frontend developer specializing in responsive and interactive user interfaces. With a background in Informatics from Jenderal Soedirman University, I combine technical expertise with creative design thinking. I have extensive experience with modern frameworks like React and Vue.js, and I'm proficient in HTML, CSS, and JavaScript.",
+    myApproach: 'My development philosophy centers on user-centered design principles where every decision prioritizes the end user experience. I follow a systematic approach with thorough planning and iterative development cycles. I emphasize clean, maintainable code while staying updated with industry best practices. Performance optimization and accessibility are crucial aspects of my workflow.',
     educationTitle: 'Education',
     experienceTitle: 'Experience',
     experience: [
@@ -58,7 +59,7 @@ const content = {
         position: 'Staff Kementerian Minat dan Bakat',
         year: 'Mar 2024 - Des 2024',
         location: 'Purbalingga, Jawa Tengah, Indonesia',
-        description: 'As Staff of Interest and Talent Ministry in Faculty of Engineering Student Executive Board UNSOED (BEM FT UNSOED), I contributed in planning and executing various interest and talent development programs for Faculty of Engineering students Universitas Jenderal Soedirman.',
+        description: 'As Staff of Interest and Talent Ministry in Faculty of Engineering Student Executive Board UNSOED (BEM FT UNSOED), I contributed in planning and executing various interest and talent development programs for Faculty of Engineering students Jenderal Soedirman University.',
         achievements: [
           'Identified student potential for competition preparation',
           'Organized annual programs such as POST and other activities',
@@ -74,7 +75,7 @@ const content = {
         position: 'Faculty of Engineering Coordinator for the PORSOED Event',
         year: 'Sep 2024 - Nov 2024',
         location: 'Purwokerto, Jawa Tengah, Indonesia',
-        description: 'As Faculty Coordinator in PORSOED (Pekan Olahraga Soedirman) representing BEM FT UNSOED, I was responsible for full coordination and contingent management of Faculty of Engineering Universitas Jenderal Soedirman in following inter-faculty sports competition.',
+        description: 'As Faculty Coordinator in PORSOED (Pekan Olahraga Soedirman) representing BEM FT UNSOED, I was responsible for full coordination and contingent management of Faculty of Engineering Jenderal Soedirman University in following inter-faculty sports competition.',
         achievements: [
           'Successfully coordinated 40+ athletes and officials from Faculty of Engineering in 16 sports branches',
           'Delivered Faculty of Engineering to rank 2nd after accumulating PORSOED 2024 points',
@@ -101,7 +102,7 @@ const content = {
         technologies: ['Leadership', 'Training Management', 'Human Resource Development', 'Program Coordination']
       },
       {
-        title: 'Universitas Jenderal Soedirman',
+        title: 'Jenderal Soedirman University',
         position: 'Data Structure Laboratory Assistant Informatics 2025',
         year: 'Mar 2025 - Present',
         location: 'Purbalingga, Jawa Tengah, Indonesia',
@@ -118,10 +119,10 @@ const content = {
     ],
     education: [
       {
-        institution: 'Universitas Jenderal Soedirman',
-        degree: 'Bachelor of Informatics Engineering',
+        institution: 'Jenderal Soedirman University',
+        degree: 'Bachelor of Computer Science (Informatics)',
         year: '2023 - Present',
-        description: 'Currently pursuing a degree in Informatics Engineering with focus on software development, algorithms, and computer systems.',
+        description: 'Currently pursuing a degree in Informatics with focus on software development, algorithms, and computer systems.',
         gpa: 'GPA 3.7/4.0',
         achievements: [
           'Important Projects and Research',
@@ -278,7 +279,7 @@ const content = {
       },
       {
         title: 'Data Structure Laboratory Assistant',
-        issuer: 'Universitas Jenderal Soedirman - Faculty of Engineering/Informatics',
+        issuer: 'Jenderal Soedirman University - Faculty of Engineering/Informatics',
         year: '2025',
         status: 'Active',
         credentialId: 'Academic Year 2024/2025',
@@ -297,9 +298,11 @@ const content = {
     name: 'Tsaqif Hasbi Aghna Syarief',
     title: 'Portofolio',
     subtitle: 'Mahasiswa Informatika & Tech Enthusiast',
-    description: 'Mahasiswa Teknik Informatika Universitas Jenderal Soedirman yang passionate dalam pengembangan perangkat lunak, struktur data, dan digital marketing. Saat ini menjabat sebagai Ketua Divisi Pengembangan SDM di HMIF UNSOED dan Asisten Laboratorium Struktur Data.',
+    description: 'Mahasiswa Informatika Universitas Jenderal Soedirman yang passionate dalam pengembangan perangkat lunak, struktur data, dan digital marketing. Saat ini menjabat sebagai Ketua Divisi Pengembangan SDM di HMIF UNSOED dan Asisten Laboratorium Struktur Data.',
     aboutTitle: 'Tentang Saya',
-    aboutDesc: 'Saya adalah mahasiswa Teknik Informatika yang ambisius dengan fondasi kuat dalam pemrograman, desain algoritma, dan digital marketing. Pengalaman kepemimpinan saya meliputi pengelolaan program pengembangan SDM dan koordinasi acara besar universitas. Saya menggabungkan kemampuan teknis dengan pemikiran strategis untuk menciptakan solusi inovatif.',
+    aboutDesc: 'Saya adalah mahasiswa Informatika yang ambisius dengan fondasi kuat dalam pemrograman, desain algoritma, dan digital marketing. Pengalaman kepemimpinan saya meliputi pengelolaan program pengembangan SDM dan koordinasi acara besar universitas. Saya menggabungkan kemampuan teknis dengan pemikiran strategis untuk menciptakan solusi inovatif.',
+    whoAmI: 'Saya adalah frontend developer yang bersemangat dan mengkhususkan diri dalam antarmuka pengguna yang responsif dan interaktif. Dengan latar belakang Informatika dari Universitas Jenderal Soedirman, saya memadukan keahlian teknis dengan pemikiran desain kreatif. Saya memiliki pengalaman luas dengan framework modern seperti React dan Vue.js, serta mahir dalam HTML, CSS, dan JavaScript.',
+    myApproach: 'Filosofi pengembangan saya berpusat pada prinsip desain yang mengutamakan pengguna di mana setiap keputusan memprioritaskan pengalaman pengguna akhir. Saya mengikuti pendekatan sistematis dengan perencanaan menyeluruh dan siklus pengembangan iteratif. Saya menekankan kode yang bersih dan mudah dipelihara sambil terus mengikuti praktik terbaik industri. Optimisasi performa dan aksesibilitas adalah aspek penting dalam alur kerja saya.',
     educationTitle: 'Pendidikan',
     experienceTitle: 'Pengalaman',
     experience: [
@@ -387,9 +390,9 @@ const content = {
     education: [
       {
         institution: 'Universitas Jenderal Soedirman',
-        degree: 'Sarjana Teknik Informatika',
+        degree: 'Sarjana Komputer (Informatika)',
         year: '2023 - Sekarang',
-        description: 'Sedang menempuh pendidikan Sarjana Teknik Informatika dengan fokus pada pengembangan perangkat lunak, algoritma, dan sistem komputer.',
+        description: 'Sedang menempuh pendidikan Sarjana Komputer jurusan Informatika dengan fokus pada pengembangan perangkat lunak, algoritma, dan sistem komputer.',
         gpa: 'IPK 3.7/4.0',
         achievements: [
           'Proyek Penting dan Penelitian',
@@ -665,56 +668,40 @@ function App() {
         <div className="container">
           <h3 className="section-title">{t.aboutTitle}</h3>
           <div className="about-content">
-            <div className="about-visual">
-              <div className="about-circles">
-                <div className="circle circle-1"></div>
-                <div className="circle circle-2"></div>
-                <div className="circle circle-3"></div>
-                <div className="circle circle-4"></div>
-              </div>
-              <div className="about-main-circle">
-                <div className="about-avatar">
-                  <img 
-                    src="/tsf.jpg" 
-                    alt="Tsaqif Hasbi Aghna Syarief" 
-                    className="about-avatar-image"
-                    onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
-                    }}
-                  />
-                  <div className="about-avatar-placeholder" style={{display: 'none'}}>
-                    <FaUser />
+            <div className="about-left">
+              <div className="about-visual">
+                <div className="about-circles">
+                  <div className="circle circle-1"></div>
+                  <div className="circle circle-2"></div>
+                  <div className="circle circle-3"></div>
+                  <div className="circle circle-4"></div>
+                </div>
+                <div className="about-main-circle">
+                  <div className="about-avatar">
+                    <img 
+                      src="/tsf.jpg" 
+                      alt="Tsaqif Hasbi Aghna Syarief" 
+                      className="about-avatar-image"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextSibling.style.display = 'flex';
+                      }}
+                    />
+                    <div className="about-avatar-placeholder" style={{display: 'none'}}>
+                      <FaUser />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="about-text">
-              <p className="about-description">{t.aboutDesc}</p>
-              <div className="about-highlights">
-                <div className="highlight-card">
-                  <div className="highlight-icon">
-                    <FaLightbulb />
-                  </div>
-                  <div className="highlight-content">
-                    <h4>{lang === 'id' ? 'Pendekatan Berorientasi Tujuan' : 'Goal-oriented approach'}</h4>
-                  </div>
+            <div className="about-right">
+              <div className="about-text-content">
+                <div className="about-paragraph">
+                  <p className="paragraph-text">{t.whoAmI}</p>
                 </div>
-                <div className="highlight-card">
-                  <div className="highlight-icon">
-                    <FaGraduationCap />
-                  </div>
-                  <div className="highlight-content">
-                    <h4>{lang === 'id' ? 'Kualitas Profesional' : 'Professional quality'}</h4>
-                  </div>
-                </div>
-                <div className="highlight-card">
-                  <div className="highlight-icon">
-                    <FaRocket />
-                  </div>
-                  <div className="highlight-content">
-                    <h4>{lang === 'id' ? 'Passionate tentang apa yang saya lakukan' : 'Passionate about what I do'}</h4>
-                  </div>
+                
+                <div className="about-paragraph">
+                  <p className="paragraph-text">{t.myApproach}</p>
                 </div>
               </div>
             </div>
