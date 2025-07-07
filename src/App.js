@@ -3,7 +3,6 @@ import './App.css';
 import { 
   FaPalette, 
   FaCode, 
-  FaBolt, 
   FaRocket, 
   FaMobile, 
   FaLightbulb,
@@ -20,6 +19,8 @@ import {
   FaSearch,
   FaMicrosoft,
   FaGraduationCap,
+  FaBrain,
+  FaCertificate,
   // FaCalendarAlt
 } from 'react-icons/fa';
 
@@ -91,10 +92,9 @@ const content = {
         description: 'As Head of Human Resource Development Division in HMIF UNSOED (Himpunan Mahasiswa Informatika), I lead the division responsible for developing human resources, organizing training programs, and enhancing the skills and capabilities of Informatics students.',
         achievements: [
           'Successfully designed and implemented comprehensive training programs for Informatics students',
-          'Organized technical workshops on programming, web development, and emerging technologies',
           'Developed mentorship programs pairing senior and junior students for knowledge transfer',
+          'Designed and developed cadre events for Informatics department to build character and leadership skills',
           'Coordinated professional development seminars with industry experts and alumni',
-          'Established partnerships with tech companies for internship and job placement opportunities',
           'Led recruitment and orientation programs for new HMIF members',
           'Implemented skill assessment and certification tracking system for members'
         ],
@@ -189,15 +189,38 @@ const content = {
       },
     ],
     projectsTitle: 'Featured Projects',
+    certificationsTitle: 'Certifications',
+    certifications: [
+      {
+        title: 'Digital Marketing',
+        issuer: 'Indonesian Professional Certification Authority (BNSP)',
+        year: '2022',
+        status: 'Active',
+        credentialId: 'No. 62090 2431 0 0034390 2022',
+        description: 'Professional certification in digital marketing strategies, social media management, and online advertising campaigns.',
+        skills: ['Digital Marketing', 'Social Media Management', 'Online Advertising', 'Marketing Analytics']
+      },
+      {
+        title: 'Software Engineering',
+        issuer: 'Indonesian Professional Certification Authority (BNSP)',
+        year: '2023',
+        status: 'Active',
+        credentialId: 'No. 62010 3514 2 0001413 2023',
+        description: 'Professional certification in software engineering with qualification in software development and engineering practices.',
+        skills: ['Software Development', 'Programming', 'System Design', 'Software Engineering']
+      }
+    ],
     contactTitle: 'Get In Touch',
     contactDesc: 'Feel free to reach out for collaborations or just a friendly hello!',
     language: 'Language',
     langCode: 'EN',
   },
+
+  // Indonesian content
   id: {
     name: 'Tsaqif Hasbi Aghna Syarief',
     title: 'Portofolio',
-    subtitle: 'Creative Developer & Designer',
+    subtitle: 'Developer & Desainer Kreatif',
     description: 'Selamat datang di portofolio saya! Saya antusias dalam desain UI/UX, pengembangan web, dan pemrograman logika.',
     aboutTitle: 'Tentang Saya',
     aboutDesc: 'Saya adalah seorang developer kreatif dengan passion untuk menciptakan pengalaman digital yang indah dan fungsional. Saya mengkhususkan diri dalam desain UI/UX, pengembangan web, dan pemrograman logika.',
@@ -261,10 +284,9 @@ const content = {
         description: 'Sebagai Ketua Divisi Pengembangan Sumber Daya Manusia di HMIF UNSOED (Himpunan Mahasiswa Informatika), saya memimpin divisi yang bertanggung jawab mengembangkan sumber daya manusia, menyelenggarakan program pelatihan, dan meningkatkan kemampuan mahasiswa Informatika.',
         achievements: [
           'Berhasil merancang dan mengimplementasikan program pelatihan komprehensif untuk mahasiswa Informatika',
-          'Menyelenggarakan workshop teknis tentang pemrograman, pengembangan web, dan teknologi terkini',
           'Mengembangkan program mentoring yang memadukan mahasiswa senior dan junior untuk transfer knowledge',
+          'Merancang dan mengembangkan acara kaderisasi jurusan Informatika untuk membangun karakter dan jiwa kepemimpinan',
           'Mengkoordinasikan seminar pengembangan profesional dengan pakar industri dan alumni',
-          'Membangun kemitraan dengan perusahaan teknologi untuk peluang magang dan penempatan kerja',
           'Memimpin program rekrutmen dan orientasi anggota baru HMIF',
           'Mengimplementasikan sistem penilaian kemampuan dan tracking sertifikasi untuk anggota'
         ],
@@ -358,6 +380,27 @@ const content = {
       },
     ],
     projectsTitle: 'Proyek Unggulan',
+    certificationsTitle: 'Sertifikasi',
+    certifications: [
+      {
+        title: 'Digital Marketing',
+        issuer: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+        year: '2022',
+        status: 'Aktif',
+        credentialId: 'No. 62090 2431 0 0034390 2022',
+        description: 'Sertifikasi profesional dalam strategi pemasaran digital, manajemen media sosial, dan kampanye iklan online.',
+        skills: ['Digital Marketing', 'Manajemen Media Sosial', 'Periklanan Online', 'Analitik Pemasaran']
+      },
+      {
+        title: 'Software Engineering',
+        issuer: 'Badan Nasional Sertifikasi Profesi (BNSP)',
+        year: '2023',
+        status: 'Aktif',
+        credentialId: 'No. 62010 3514 2 0001413 2023',
+        description: 'Sertifikasi profesional dalam software engineering dengan kualifikasi dalam pengembangan perangkat lunak dan praktik rekayasa.',
+        skills: ['Pengembangan Perangkat Lunak', 'Pemrograman', 'Desain Sistem', 'Rekayasa Perangkat Lunak']
+      }
+    ],
     contactTitle: 'Mari Berkenalan',
     contactDesc: 'Jangan ragu untuk menghubungi saya untuk kolaborasi atau sekadar menyapa!',
     language: 'Bahasa',
@@ -370,6 +413,19 @@ function App() {
   const [darkMode, setDarkMode] = useState(true); // Default dark mode
   const t = content[lang];
 
+  // Smooth scroll function
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      //const yOffset = -80; // Offset to account for fixed navbar
+      const y = element.getBoundingClientRect().top + window.pageYOffset; //+ yOffset
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <div className={`App modern-portfolio ${darkMode ? 'dark' : ''}`}>
       {/* Navigation */}
@@ -377,12 +433,13 @@ function App() {
         <div className="nav-container">
           <div className="nav-brand">Tsaqif Hasbi Aghna Syarief</div>
           <div className="nav-menu">
-            <a href="#about" className="nav-link">About</a>
-            <a href="#education" className="nav-link">Education</a>
-            <a href="#experience" className="nav-link">Experience</a>
-            <a href="#skills" className="nav-link">Skills</a>
-            <a href="#projects" className="nav-link">Projects</a>
-            <a href="#contact" className="nav-link">Contact</a>
+            <button onClick={() => scrollToSection('about')} className="nav-link">{lang === 'id' ? 'Tentang' : 'About'}</button>
+            <button onClick={() => scrollToSection('education')} className="nav-link">{lang === 'id' ? 'Pendidikan' : 'Education'}</button>
+            <button onClick={() => scrollToSection('experience')} className="nav-link">{lang === 'id' ? 'Pengalaman' : 'Experience'}</button>
+            <button onClick={() => scrollToSection('skills')} className="nav-link">{lang === 'id' ? 'Keahlian' : 'Skills'}</button>
+            <button onClick={() => scrollToSection('projects')} className="nav-link">{lang === 'id' ? 'Proyek' : 'Projects'}</button>
+            <button onClick={() => scrollToSection('certifications')} className="nav-link">{lang === 'id' ? 'Sertifikasi' : 'Certifications'}</button>
+            <button onClick={() => scrollToSection('contact')} className="nav-link">{lang === 'id' ? 'Kontak' : 'Contact'}</button>
             <button className="dark-mode-toggle" onClick={() => setDarkMode(!darkMode)}>
               {darkMode ? <FaSun /> : <FaMoon />}
             </button>
@@ -402,8 +459,8 @@ function App() {
             <p className="hero-subtitle">{t.subtitle}</p>
             <p className="hero-description">{t.description}</p>
             <div className="hero-buttons">
-              <button className="btn btn-primary">View My Work</button>
-              <button className="btn btn-secondary">Contact Me</button>
+              <button className="btn btn-primary" onClick={() => scrollToSection('projects')}>{lang === 'id' ? 'Lihat Karya Saya' : 'View My Work'}</button>
+              <button className="btn btn-secondary" onClick={() => scrollToSection('contact')}>{lang === 'id' ? 'Hubungi Saya' : 'Contact Me'}</button>
             </div>
           </div>
           <div className="hero-visual">
@@ -427,7 +484,61 @@ function App() {
       <section className="about-section" id="about">
         <div className="container">
           <h3 className="section-title">{t.aboutTitle}</h3>
-          <p className="about-description">{t.aboutDesc}</p>
+          <div className="about-content">
+            <div className="about-visual">
+              <div className="about-circles">
+                <div className="circle circle-1"></div>
+                <div className="circle circle-2"></div>
+                <div className="circle circle-3"></div>
+                <div className="circle circle-4"></div>
+              </div>
+              <div className="about-main-circle">
+                <div className="about-avatar">
+                  <img 
+                    src="/tsf.jpg" 
+                    alt="Tsaqif Hasbi Aghna Syarief" 
+                    className="about-avatar-image"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div className="about-avatar-placeholder" style={{display: 'none'}}>
+                    <FaUser />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="about-text">
+              <p className="about-description">{t.aboutDesc}</p>
+              <div className="about-highlights">
+                <div className="highlight-card">
+                  <div className="highlight-icon">
+                    <FaLightbulb />
+                  </div>
+                  <div className="highlight-content">
+                    <h4>{lang === 'id' ? 'Pendekatan Berorientasi Tujuan' : 'Goal-oriented approach'}</h4>
+                  </div>
+                </div>
+                <div className="highlight-card">
+                  <div className="highlight-icon">
+                    <FaGraduationCap />
+                  </div>
+                  <div className="highlight-content">
+                    <h4>{lang === 'id' ? 'Kualitas Profesional' : 'Professional quality'}</h4>
+                  </div>
+                </div>
+                <div className="highlight-card">
+                  <div className="highlight-icon">
+                    <FaRocket />
+                  </div>
+                  <div className="highlight-content">
+                    <h4>{lang === 'id' ? 'Passionate tentang apa yang saya lakukan' : 'Passionate about what I do'}</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -450,7 +561,7 @@ function App() {
                   <p className="education-description">{edu.description}</p>
                   <div className="education-gpa">{edu.gpa}</div>
                   <div className="education-achievements">
-                    <h6>Key Achievements:</h6>
+                    <h6>{lang === 'id' ? 'Pencapaian Utama:' : 'Key Achievements:'}</h6>
                     <ul>
                       {edu.achievements.map((achievement, achIdx) => (
                         <li key={achIdx}>{achievement}</li>
@@ -483,7 +594,7 @@ function App() {
                   <div className="experience-location">{exp.location}</div>
                   <p className="experience-description">{exp.description}</p>
                   <div className="experience-achievements">
-                    <h6>Key Achievements:</h6>
+                    <h6>{lang === 'id' ? 'Pencapaian Utama:' : 'Key Achievements:'}</h6>
                     <ul>
                       {exp.achievements.map((achievement, achIdx) => (
                         <li key={achIdx}>{achievement}</li>
@@ -491,7 +602,7 @@ function App() {
                     </ul>
                   </div>
                   <div className="experience-technologies">
-                    <h6>Skills & Competencies:</h6>
+                    <h6>{lang === 'id' ? 'Keterampilan & Kompetensi:' : 'Skills & Competencies:'}</h6>
                     <div className="tech-tags">
                       {exp.technologies.map((tech, techIdx) => (
                         <span key={techIdx} className="tech-tag">{tech}</span>
@@ -516,7 +627,7 @@ function App() {
                   <div className="skill-icon">
                     {idx === 0 ? <FaPalette /> : 
                      idx === 1 ? <FaCode /> : 
-                     idx === 2 ? <FaBolt /> : 
+                     idx === 2 ? <FaBrain /> : 
                      idx === 3 ? <FaDatabase /> : 
                      idx === 4 ? <FaGitAlt /> : 
                      idx === 5 ? <FaBullhorn /> :
@@ -566,6 +677,42 @@ function App() {
         </div>
       </section>
 
+      {/* Certifications Section */}
+      <section className="certifications-section" id="certifications">
+        <div className="container">
+          <h3 className="section-title">{t.certificationsTitle}</h3>
+          <div className="certifications-grid">
+            {t.certifications.map((cert, idx) => (
+              <div className="certification-card" key={idx}>
+                <div className="certification-header">
+                  <div className="certification-icon">
+                    <FaCertificate />
+                  </div>
+                  <div className="certification-status">{cert.status}</div>
+                </div>
+                <div className="certification-content">
+                  <h4 className="certification-title">{cert.title}</h4>
+                  <h5 className="certification-issuer">{cert.issuer}</h5>
+                  <div className="certification-year">{lang === 'id' ? 'Terbit:' : 'Issued:'} {cert.year}</div>
+                  <p className="certification-description">{cert.description}</p>
+                  <div className="certification-credential">
+                    {lang === 'id' ? 'ID Kredensial:' : 'Credential ID:'} {cert.credentialId}
+                  </div>
+                  <div className="certification-skills">
+                    <h6>{lang === 'id' ? 'Keterampilan Utama:' : 'Key Skills:'}</h6>
+                    <div className="cert-skills-tags">
+                      {cert.skills.map((skill, skillIdx) => (
+                        <span key={skillIdx} className="cert-skill-tag">{skill}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section className="contact-section" id="contact">
         <div className="container">
@@ -573,7 +720,7 @@ function App() {
           <p className="contact-description">{t.contactDesc}</p>
           <div className="contact-links">
             <a href="mailto:tsaqifhasbi17@gmail.com" className="contact-link">
-              <FaEnvelope /> Email
+              <FaEnvelope /> {lang === 'id' ? 'Email' : 'Email'}
             </a>
             <a href="https://www.linkedin.com/in/tsaqifhasbi" className="contact-link" target="_blank" rel="noopener noreferrer">
               <FaLinkedin /> LinkedIn
