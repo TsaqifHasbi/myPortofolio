@@ -29,7 +29,7 @@ const content = {
     name: 'Tsaqif Hasbi Aghna Syarief',
     title: 'Portfolio',
     subtitle: 'Informatics Student & Tech Enthusiast',
-    description: 'Passionate Informatics student at Jenderal Soedirman University with expertise in software development, data structures, and digital marketing. Currently serving as Head of Human Resource Development Division at HMIF UNSOED and Laboratory Assistant for Data Structure course.',
+    description: 'Passionate Informatics student at Jenderal Soedirman University with expertise in software development, data structures, and digital marketing. Currently serving as Head of Human Resource Development Division at HMIF UNSOED.',
     aboutTitle: 'About Me',
     aboutDesc: 'I am an ambitious Informatics student with a strong foundation in programming, algorithm design, and digital marketing. My leadership experience includes managing human resource development programs and coordinating major university events. I combine technical skills with strategic thinking to create innovative solutions.',
     whoAmI: "I'm a passionate frontend developer specializing in responsive and interactive user interfaces. With a background in Informatics from Jenderal Soedirman University, I combine technical expertise with creative design thinking. I have extensive experience with modern frameworks like React and Vue.js, and I'm proficient in HTML, CSS, and JavaScript.",
@@ -105,15 +105,16 @@ const content = {
       {
         title: 'Jenderal Soedirman University',
         position: 'Data Structure Laboratory Assistant Informatics 2025',
-        year: 'Mar 2025 - Present',
+        year: 'Mar 2025 - Jun 2025',
         location: 'Purbalingga, Jawa Tengah, Indonesia',
-        description: 'As a Data Structure Laboratory Assistant, I assist faculty instructors in conducting practicum and guide students in understanding basic concepts and implementation of data structures using programming languages.',
+        description: 'As a Data Structure Laboratory Assistant, I assisted faculty instructors in conducting practicum and guided students in understanding basic concepts and implementation of data structures using programming languages.',
         achievements: [
           'Successfully helped students understand fundamental data structure concepts and implementations',
           'Assisted students in solving practicum problems and provided programming guidance',
           'Objectively evaluated student practicum results and provided accurate assessments',
           'Provided solutions and additional explanations to strengthen student understanding',
-          'Maintained order and continuity during practicum sessions'
+          'Maintained order and continuity during practicum sessions',
+          'Completed 3-month intensive teaching period with positive student feedback'
         ],
         technologies: ['C Programming Language', 'Communication', 'Teaching']
       }
@@ -130,7 +131,7 @@ const content = {
           'Software Development Projects',
           'Organization and Leadership',
           'Volunteer Work',
-          'Lab Assistant for Data Structure Course'
+          'Lab Assistant Experience'
         ]
       },
       {
@@ -302,9 +303,9 @@ const content = {
         title: 'Data Structure Laboratory Assistant',
         issuer: 'Jenderal Soedirman University - Faculty of Engineering/Informatics',
         year: '2025',
-        status: 'Active',
+        status: 'Completed',
         credentialId: 'Academic Year 2024/2025',
-        description: 'Official certification as Data Structure Laboratory Assistant for Academic Year 2024/2025, authorized to assist in Data Structure practicum courses under supervision of Bangun Wijayanto.',
+        description: 'Official certification as Data Structure Laboratory Assistant for Academic Year 2024/2025, successfully completed teaching assistance duties in Data Structure practicum courses under supervision of Bangun Wijayanto from March to June 2025.',
         skills: ['Data Structures', 'C Programming', 'Teaching', 'Laboratory Management']
       }
     ],
@@ -319,7 +320,7 @@ const content = {
     name: 'Tsaqif Hasbi Aghna Syarief',
     title: 'Portofolio',
     subtitle: 'Mahasiswa Informatika & Tech Enthusiast',
-    description: 'Mahasiswa Informatika Universitas Jenderal Soedirman yang passionate dalam pengembangan perangkat lunak, struktur data, dan digital marketing. Saat ini menjabat sebagai Ketua Divisi Pengembangan SDM di HMIF UNSOED dan Asisten Laboratorium Struktur Data.',
+    description: 'Mahasiswa Informatika Universitas Jenderal Soedirman yang passionate dalam pengembangan perangkat lunak, struktur data, dan digital marketing. Saat ini menjabat sebagai Ketua Divisi Pengembangan Sumber Daya Mahasiswa di HMIF UNSOED.',
     aboutTitle: 'Tentang Saya',
     aboutDesc: 'Saya adalah mahasiswa Informatika yang ambisius dengan fondasi kuat dalam pemrograman, desain algoritma, dan digital marketing. Pengalaman kepemimpinan saya meliputi pengelolaan program pengembangan SDM dan koordinasi acara besar universitas. Saya menggabungkan kemampuan teknis dengan pemikiran strategis untuk menciptakan solusi inovatif.',
     whoAmI: 'Saya adalah frontend developer yang bersemangat dan mengkhususkan diri dalam antarmuka pengguna yang responsif dan interaktif. Dengan latar belakang Informatika dari Universitas Jenderal Soedirman, saya memadukan keahlian teknis dengan pemikiran desain kreatif. Saya memiliki pengalaman luas dengan framework modern seperti React dan Vue.js, serta mahir dalam HTML, CSS, dan JavaScript.',
@@ -395,7 +396,7 @@ const content = {
       {
         title: 'Universitas Jenderal Soedirman',
         position: 'Asisten Laboratorium Struktur Data Informatika 2025',
-        year: 'Mar 2025 - Sekarang',
+        year: 'Mar 2025 - Jun 2025',
         location: 'Purbalingga, Jawa Tengah, Indonesia',
         description: 'Sebagai Asisten Laboratorium Struktur Data, saya membantu dosen pengampu dalam pelaksanaan praktikum dan membimbing mahasiswa dalam memahami konsep dasar dan implementasi struktur data menggunakan bahasa pemrograman.',
         achievements: [
@@ -403,7 +404,8 @@ const content = {
           'Membantu mahasiswa dalam memecahkan masalah praktikum dan memberikan bimbingan pemrograman',
           'Mengevaluasi hasil praktikum mahasiswa secara objektif dan memberikan penilaian yang akurat',
           'Memberikan solusi dan penjelasan tambahan untuk memperkuat pemahaman mahasiswa',
-          'Menjaga ketertiban dan kelancaran saat berlangsungnya sesi praktikum'
+          'Menjaga ketertiban dan kelancaran saat berlangsungnya sesi praktikum',
+          'Menyelesaikan periode pengajaran intensif 3 bulan dengan feedback positif dari mahasiswa'
         ],
         technologies: ['Bahasa Pemrograman C', 'Komunikasi', 'Pengajaran']
       }
@@ -420,7 +422,7 @@ const content = {
           'Proyek Pengembangan Perangkat Lunak',
           'Organisasi dan Kepemimpinan',
           'Kerja Volunteer',
-          'Asisten Praktikum Mata Kuliah Struktur Data'
+          'Pengalaman Asisten Praktikum'
         ]
       },
       {
@@ -592,9 +594,9 @@ const content = {
         title: 'Asisten Laboratorium Struktur Data',
         issuer: 'Universitas Jenderal Soedirman - Fakultas Teknik/Informatika',
         year: '2025',
-        status: 'Aktif',
+        status: 'Selesai',
         credentialId: 'Tahun Akademik 2024/2025',
-        description: 'Sertifikat resmi sebagai Asisten Laboratorium Struktur Data untuk Tahun Akademik 2024/2025, berwenang membantu dalam praktikum mata kuliah Struktur Data di bawah pengawasan Bangun Wijayanto.',
+        description: 'Sertifikat resmi sebagai Asisten Laboratorium Struktur Data untuk Tahun Akademik 2024/2025, berhasil menyelesaikan tugas bantuan pengajaran dalam praktikum mata kuliah Struktur Data di bawah pengawasan Bangun Wijayanto dari Maret hingga Juni 2025.',
         skills: ['Struktur Data', 'Pemrograman C', 'Pengajaran', 'Manajemen Laboratorium']
       }
     ],
