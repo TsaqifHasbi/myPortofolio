@@ -425,13 +425,13 @@ body {
 .circle {
   position: absolute;
   border-radius: 50%;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .circle-1 {
   width: 100px;
   height: 100px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
   top: 10%;
   left: 10%;
   animation: float 6s ease-in-out infinite;
@@ -440,7 +440,7 @@ body {
 .circle-2 {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: linear-gradient(135deg, #4a4a4a 0%, #2d2d2d 100%);
   top: 20%;
   right: 20%;
   animation: float 4s ease-in-out infinite reverse;
@@ -449,7 +449,7 @@ body {
 .circle-3 {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  background: linear-gradient(135deg, #d1d5db 0%, #9ca3af 100%);
   bottom: 20%;
   left: 20%;
   animation: float 5s ease-in-out infinite;
@@ -458,7 +458,7 @@ body {
 .circle-4 {
   width: 120px;
   height: 120px;
-  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
   bottom: 10%;
   right: 10%;
   animation: float 7s ease-in-out infinite reverse;
@@ -468,24 +468,24 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #000000 0%, #4a4a4a 25%, #9ca3af 50%, #1e3a8a 75%, #1e40af 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 20px 40px rgba(30, 58, 138, 0.3);
   position: relative;
   z-index: 2;
 }
 
 .about-avatar {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 4rem;
   color: white;
   position: relative;
   overflow: hidden;
@@ -504,7 +504,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
+  font-size: 4rem;
   color: white;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
@@ -570,6 +570,28 @@ body {
   50% { transform: translateY(-20px); }
 }
 
+/* Dark mode circles */
+.dark .circle-1 {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+}
+
+.dark .circle-2 {
+  background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+}
+
+.dark .circle-3 {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+}
+
+.dark .circle-4 {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.dark .about-main-circle {
+  background: linear-gradient(135deg, #1a1a1a 0%, #374151 25%, #6b7280 50%, #3b82f6 75%, #1d4ed8 100%);
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .about-content {
@@ -579,12 +601,22 @@ body {
   }
   
   .about-visual {
-    min-height: 400px;
+    min-height: 450px;
   }
   
   .about-main-circle {
     width: 250px;
     height: 250px;
+  }
+  
+  .about-avatar {
+    width: 120px;
+    height: 120px;
+    font-size: 3.5rem;
+  }
+  
+  .about-avatar-placeholder {
+    font-size: 3.5rem;
   }
   
   .about-text {
@@ -672,17 +704,89 @@ body {
   margin-bottom: 1.5rem;
   line-height: 1.6;
   flex-grow: 1;
+  text-align: justify;
 }
 
-.skill-tech {
-  font-size: 0.9rem;
-  color: var(--accent-color);
-  font-weight: 500;
-  background: rgba(59, 130, 246, 0.1);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  display: inline-block;
+.skill-techs {
+  width: 100%;
   margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.tech-item {
+  width: 100%;
+}
+
+.tech-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.tech-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.tech-level {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-color);
+}
+
+.tech-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--bg-tertiary);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.tech-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-hover));
+  border-radius: 10px;
+  transition: width 1.2s ease-in-out;
+  width: 0%;
+}
+
+.tech-progress-fill.animate {
+  animation: none;
+}
+
+/* Remove old skill progress styles */
+.skill-tech {
+  display: none;
+}
+
+.skill-progress {
+  display: none;
+}
+
+.skill-progress-bar {
+  display: none;
+}
+
+.skill-progress-fill {
+  display: none;
+}
+
+.skill-percentage {
+  display: none;
+}
+
+/* Dark mode adjustments for tech progress */
+.dark .tech-progress-bar {
+  background: var(--bg-tertiary);
+}
+
+.dark .tech-progress-fill {
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-hover));
 }
 
 /* Projects Section */
@@ -1557,5 +1661,59 @@ body {
     border-right: 10px solid var(--card-bg);
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
+  }
+}
+
+/* Responsive design for skills */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 4rem 0;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .skill-card {
+    padding: 2rem;
+    max-width: 100%;
+  }
+  
+  .skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .skill-icon svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .skill-title {
+    font-size: 1.25rem;
+  }
+  
+  .skill-desc {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+  }
+  
+  .skill-techs {
+    gap: 0.8rem;
+  }
+  
+  .tech-name {
+    font-size: 0.85rem;
+  }
+  
+  .tech-level {
+    font-size: 0.75rem;
+  }
+  
+  .tech-progress-bar {
+    height: 6px;
   }
 }

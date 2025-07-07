@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 import { 
   FaPalette, 
   FaCode, 
   FaRocket, 
-  FaMobile, 
   FaLightbulb,
   FaEnvelope,
   FaLinkedin,
@@ -21,6 +20,7 @@ import {
   FaGraduationCap,
   FaBrain,
   FaCertificate,
+  FaServer,
   // FaCalendarAlt
 } from 'react-icons/fa';
 
@@ -28,10 +28,10 @@ const content = {
   en: {
     name: 'Tsaqif Hasbi Aghna Syarief',
     title: 'Portfolio',
-    subtitle: 'Creative Developer & Designer',
-    description: 'Welcome to my portfolio! I am passionate about UI/UX design, web development, and logical programming.',
+    subtitle: 'Informatics Student & Tech Enthusiast',
+    description: 'Passionate Informatics Engineering student at Universitas Jenderal Soedirman with expertise in software development, data structures, and digital marketing. Currently serving as Head of Human Resource Development Division at HMIF UNSOED and Laboratory Assistant for Data Structure course.',
     aboutTitle: 'About Me',
-    aboutDesc: 'I am a creative developer with a passion for creating beautiful and functional digital experiences. I specialize in UI/UX design, web development, and logical programming.',
+    aboutDesc: 'I am an ambitious Informatics Engineering student with a strong foundation in programming, algorithm design, and digital marketing. My leadership experience includes managing human resource development programs and coordinating major university events. I combine technical skills with strategic thinking to create innovative solutions.',
     educationTitle: 'Education',
     experienceTitle: 'Experience',
     experience: [
@@ -65,7 +65,7 @@ const content = {
           'Created proposals for sponsorship and funding',
           'Coordinated FT in PORSOED event',
           'Guided students to face competitions at university and inter-university levels',
-          'Received Achievement Staff Of The Month in June 2024 for hard work and dedication'
+          'Received Staff of the Month award in June 2024 for outstanding hard work and dedication'
         ],
         technologies: ['Event Management', 'Leadership', 'Project Management']
       },
@@ -109,11 +109,11 @@ const content = {
         achievements: [
           'Successfully helped students understand fundamental data structure concepts and implementations',
           'Assisted students in solving practicum problems and provided programming guidance',
-          'Objectively examined and evaluated student practicum results',
+          'Objectively evaluated student practicum results and provided accurate assessments',
           'Provided solutions and additional explanations to strengthen student understanding',
           'Maintained order and continuity during practicum sessions'
         ],
-        technologies: ['C (Programming Language)', 'Communication', 'Teaching']
+        technologies: ['C Programming Language', 'Communication', 'Teaching']
       }
     ],
     education: [
@@ -149,46 +149,113 @@ const content = {
     skills: [
       { 
         title: 'UI/UX Design', 
-        desc: 'Creating intuitive and beautiful user interfaces using Figma, Adobe XD, and modern design principles.',
-        tech: 'Figma, Prototyping'
+        desc: 'Creating intuitive and beautiful user interfaces using Figma, Canva, and modern design principles.',
+        techs: [
+          { name: 'Figma', level: 90 },
+          { name: 'Canva', level: 85 },
+          { name: 'Prototyping', level: 88 },
+          { name: 'Adobe Illustrator', level: 82 }
+        ]
       },
       { 
         title: 'Web Development', 
         desc: 'Building responsive and interactive websites using modern web technologies and frameworks.',
-        tech: 'HTML, CSS, JavaScript, React, Vue'
+        techs: [
+          { name: 'HTML', level: 95 },
+          { name: 'CSS', level: 92 },
+          { name: 'JavaScript', level: 88 },
+          { name: 'ReactJS', level: 85 },
+          { name: 'VueJS', level: 50 }
+        ]
+      },
+      { 
+        title: 'Backend Frameworks', 
+        desc: 'Developing robust web applications using modern backend frameworks for efficient server-side development.',
+        techs: [
+          { name: 'CodeIgniter', level: 82 },
+          { name: 'Laravel', level: 80 },
+          { name: 'AdonisJS', level: 75 }
+        ]
       },
       { 
         title: 'Programming Logic', 
         desc: 'Developing efficient algorithms and solutions using various programming languages.',
-        tech: 'C, C++, Python, Java (OOP)'
+        techs: [
+          { name: 'C', level: 95 },
+          { name: 'C++', level: 88 },
+          { name: 'Python', level: 85 },
+          { name: 'Java (OOP)', level: 82 }
+        ]
       },
       { 
         title: 'Database & SQL', 
         desc: 'Designing and managing databases with efficient query optimization and data modeling.',
-        tech: 'MySQL, SQL'
+        techs: [
+          { name: 'MySQL', level: 88 },
+          { name: 'SQL Queries', level: 85 },
+          { name: 'Database Design', level: 80 },
+          { name: 'Data Modeling', level: 78 }
+        ]
       },
       { 
         title: 'Version Control', 
         desc: 'Managing code versions and collaboration using Git and GitHub for efficient project development.',
-        tech: 'Git, GitHub, Collaboration'
+        techs: [
+          { name: 'Git', level: 92 },
+          { name: 'GitHub', level: 88 },
+          { name: 'Collaboration', level: 85 },
+          { name: 'Branch Management', level: 82 }
+        ]
       },
       { 
         title: 'Digital Marketing', 
         desc: 'Developing comprehensive digital marketing strategies including social media management, SEO optimization, and Google advertising campaigns.',
-        tech: 'Social Media, Google Ads, Analytics'
+        techs: [
+          { name: 'Social Media', level: 90 },
+          { name: 'Google Ads', level: 88 },
+          { name: 'Analytics', level: 85 },
+          { name: 'Content Strategy', level: 83 }
+        ]
       },
       { 
         title: 'SEO', 
         desc: 'Optimizing websites for search engines to improve visibility, ranking, and organic traffic through keyword research and technical optimization.',
-        tech: 'Keyword Research, On-Page SEO, Analytics'
+        techs: [
+          { name: 'Keyword Research', level: 95 },
+          { name: 'On-Page SEO', level: 92 },
+          { name: 'Technical SEO', level: 88 },
+          { name: 'Analytics', level: 85 }
+        ]
       },
       { 
         title: 'Microsoft Office', 
         desc: 'Proficient in Microsoft Office suite for productivity, data analysis, and professional documentation with advanced features and automation.',
-        tech: 'Word, Excel, PowerPoint, Outlook'
+        techs: [
+          { name: 'Excel', level: 92 },
+          { name: 'Word', level: 88 },
+          { name: 'PowerPoint', level: 85 },
+          { name: 'Outlook', level: 82 }
+        ]
       },
     ],
     projectsTitle: 'Featured Projects',
+    projects: [
+      {
+        title: 'Modern Web Portfolio',
+        description: 'A responsive portfolio website built with React and modern design principles featuring bilingual support and dark mode.',
+        tech: 'React • CSS • JavaScript'
+      },
+      {
+        title: 'Data Structure Algorithms',
+        description: 'Collection of efficient algorithms and data structures implemented in C programming language for educational purposes.',
+        tech: 'C • Algorithms • Data Structures'
+      },
+      {
+        title: 'Digital Marketing Analytics',
+        description: 'Comprehensive SEO analysis and digital marketing strategy implementation for improving online visibility.',
+        tech: 'SEO • Analytics • Digital Marketing'
+      }
+    ],
     certificationsTitle: 'Certifications',
     certifications: [
       {
@@ -208,6 +275,15 @@ const content = {
         credentialId: 'No. 62010 3514 2 0001413 2023',
         description: 'Professional certification in software engineering with qualification in software development and engineering practices.',
         skills: ['Software Development', 'Programming', 'System Design', 'Software Engineering']
+      },
+      {
+        title: 'Data Structure Laboratory Assistant',
+        issuer: 'Universitas Jenderal Soedirman - Faculty of Engineering/Informatics',
+        year: '2025',
+        status: 'Active',
+        credentialId: 'Academic Year 2024/2025',
+        description: 'Official certification as Data Structure Laboratory Assistant for Academic Year 2024/2025, authorized to assist in Data Structure practicum courses under supervision of Bangun Wijayanto.',
+        skills: ['Data Structures', 'C Programming', 'Teaching', 'Laboratory Management']
       }
     ],
     contactTitle: 'Get In Touch',
@@ -220,10 +296,10 @@ const content = {
   id: {
     name: 'Tsaqif Hasbi Aghna Syarief',
     title: 'Portofolio',
-    subtitle: 'Developer & Desainer Kreatif',
-    description: 'Selamat datang di portofolio saya! Saya antusias dalam desain UI/UX, pengembangan web, dan pemrograman logika.',
+    subtitle: 'Mahasiswa Informatika & Tech Enthusiast',
+    description: 'Mahasiswa Teknik Informatika Universitas Jenderal Soedirman yang passionate dalam pengembangan perangkat lunak, struktur data, dan digital marketing. Saat ini menjabat sebagai Ketua Divisi Pengembangan SDM di HMIF UNSOED dan Asisten Laboratorium Struktur Data.',
     aboutTitle: 'Tentang Saya',
-    aboutDesc: 'Saya adalah seorang developer kreatif dengan passion untuk menciptakan pengalaman digital yang indah dan fungsional. Saya mengkhususkan diri dalam desain UI/UX, pengembangan web, dan pemrograman logika.',
+    aboutDesc: 'Saya adalah mahasiswa Teknik Informatika yang ambisius dengan fondasi kuat dalam pemrograman, desain algoritma, dan digital marketing. Pengalaman kepemimpinan saya meliputi pengelolaan program pengembangan SDM dan koordinasi acara besar universitas. Saya menggabungkan kemampuan teknis dengan pemikiran strategis untuk menciptakan solusi inovatif.',
     educationTitle: 'Pendidikan',
     experienceTitle: 'Pengalaman',
     experience: [
@@ -257,7 +333,7 @@ const content = {
           'Membuat proposal untuk sponsorship dan pendanaan',
           'Koordinator FT dalam ajang PORSOED',
           'Membimbing mahasiswa menghadapi kompetisi di tingkat universitas dan antar-universitas',
-          'Mendapat Achivment Staff Of The Month pada bulan Juni 2024 karena kerja keras dan dedikasinya pada bulan itu'
+          'Mendapat penghargaan Staff Terbaik Bulan Juni 2024 karena kerja keras dan dedikasi yang luar biasa'
         ],
         technologies: ['Manajemen Acara', 'Kepemimpinan', 'Manajemen Proyek']
       },
@@ -300,9 +376,10 @@ const content = {
         description: 'Sebagai Asisten Laboratorium Struktur Data, saya membantu dosen pengampu dalam pelaksanaan praktikum dan membimbing mahasiswa dalam memahami konsep dasar dan implementasi struktur data menggunakan bahasa pemrograman.',
         achievements: [
           'Berhasil membantu mahasiswa memahami konsep dasar struktur data dan implementasinya dengan baik',
-          'Menyusun materi praktikum yang sistematis dan mudah dipahami, meningkatkan efektivitas pembelajaran',
-          'Memberikan bimbingan intensif sehingga mahasiswa lebih percaya diri dalam menyelesaikan soal praktikum dan tugas akhir',
-          'Mendapatkan umpan balik positif dari dosen pengampu dan mahasiswa atas peran aktif dalam mendukung pembelajaran praktikum'
+          'Membantu mahasiswa dalam memecahkan masalah praktikum dan memberikan bimbingan pemrograman',
+          'Mengevaluasi hasil praktikum mahasiswa secara objektif dan memberikan penilaian yang akurat',
+          'Memberikan solusi dan penjelasan tambahan untuk memperkuat pemahaman mahasiswa',
+          'Menjaga ketertiban dan kelancaran saat berlangsungnya sesi praktikum'
         ],
         technologies: ['Bahasa Pemrograman C', 'Komunikasi', 'Pengajaran']
       }
@@ -316,9 +393,9 @@ const content = {
         gpa: 'IPK 3.7/4.0',
         achievements: [
           'Proyek Penting dan Penelitian',
-          'Proyek Pengembangan Software',
+          'Proyek Pengembangan Perangkat Lunak',
           'Organisasi dan Kepemimpinan',
-          'Volunteer Work',
+          'Kerja Volunteer',
           'Asisten Praktikum Mata Kuliah Struktur Data'
         ]
       },
@@ -330,7 +407,7 @@ const content = {
         gpa: 'Lulusan Terbaik',
         achievements: [
           'Prestasi Akademik dan Teknis',
-          'Proyek Pengembangan Software - Aplikasi Web Aspirasi Mahasiswa (localhost)',
+          'Proyek Pengembangan Perangkat Lunak - Aplikasi Web Aspirasi Mahasiswa (localhost)',
           'Magang di Perusahaan Teknologi',
           'Sertifikasi Industri'
         ]
@@ -341,45 +418,112 @@ const content = {
       { 
         title: 'Desain UI/UX', 
         desc: 'Menciptakan antarmuka pengguna yang intuitif dan indah menggunakan Figma, Adobe XD, dan prinsip desain modern.',
-        tech: 'Figma, Prototyping'
+        techs: [
+          { name: 'Figma', level: 90 },
+          { name: 'Canva', level: 85 },
+          { name: 'Prototyping', level: 88 },
+          { name: 'Adobe Illustrator', level: 82 }
+        ]
       },
       { 
         title: 'Pengembangan Web', 
         desc: 'Membangun website responsif dan interaktif menggunakan teknologi web modern dan framework.',
-        tech: 'HTML, CSS, JavaScript, React, Vue'
+        techs: [
+          { name: 'HTML', level: 95 },
+          { name: 'CSS', level: 92 },
+          { name: 'JavaScript', level: 88 },
+          { name: 'ReactJS', level: 85 },
+          { name: 'VueJS', level: 50 }
+        ]
+      },
+      { 
+        title: 'Framework Backend', 
+        desc: 'Mengembangkan aplikasi web yang robust menggunakan framework backend modern untuk pengembangan sisi server yang efisien.',
+        techs: [
+          { name: 'CodeIgniter', level: 82 },
+          { name: 'Laravel', level: 80 },
+          { name: 'AdonisJS', level: 75 }
+        ]
       },
       { 
         title: 'Pemrograman Logika', 
         desc: 'Mengembangkan algoritma dan solusi yang efisien menggunakan berbagai bahasa pemrograman.',
-        tech: 'C, C++, Python, Java (OOP)'
+        techs: [
+          { name: 'C', level: 95 },
+          { name: 'C++', level: 88 },
+          { name: 'Python', level: 85 },
+          { name: 'Java (OOP)', level: 82 }
+        ]
       },
       { 
         title: 'Database & SQL', 
         desc: 'Merancang dan mengelola database dengan optimisasi query yang efisien dan pemodelan data.',
-        tech: 'MySQL, SQL'
+        techs: [
+          { name: 'MySQL', level: 88 },
+          { name: 'Query SQL', level: 85 },
+          { name: 'Desain Database', level: 80 },
+          { name: 'Pemodelan Data', level: 78 }
+        ]
       },
       { 
         title: 'Version Control', 
         desc: 'Mengelola versi kode dan kolaborasi menggunakan Git dan GitHub untuk pengembangan proyek yang efisien.',
-        tech: 'Git, GitHub, Collaboration'
+        techs: [
+          { name: 'Git', level: 92 },
+          { name: 'GitHub', level: 88 },
+          { name: 'Kolaborasi', level: 85 },
+          { name: 'Manajemen Branch', level: 82 }
+        ]
       },
       { 
         title: 'Digital Marketing', 
         desc: 'Mengembangkan strategi pemasaran digital yang komprehensif termasuk manajemen media sosial, optimisasi SEO, dan kampanye iklan Google.',
-        tech: 'Social Media, Google Ads, Analytics'
+        techs: [
+          { name: 'Media Sosial', level: 90 },
+          { name: 'Google Ads', level: 88 },
+          { name: 'Analytics', level: 85 },
+          { name: 'Strategi Konten', level: 83 }
+        ]
       },
       { 
         title: 'SEO', 
         desc: 'Mengoptimalkan website untuk mesin pencari guna meningkatkan visibilitas, ranking, dan traffic organik melalui riset kata kunci dan optimisasi teknis.',
-        tech: 'Keyword Research, On-Page SEO, Analytics'
+        techs: [
+          { name: 'Riset Kata Kunci', level: 95 },
+          { name: 'SEO On-Page', level: 92 },
+          { name: 'SEO Teknis', level: 88 },
+          { name: 'Analytics', level: 85 }
+        ]
       },
       { 
         title: 'Microsoft Office', 
         desc: 'Mahir menggunakan suite Microsoft Office untuk produktivitas, analisis data, dan dokumentasi profesional dengan fitur-fitur canggih dan otomasi.',
-        tech: 'Word, Excel, PowerPoint, Outlook'
+        techs: [
+          { name: 'Excel', level: 92 },
+          { name: 'Word', level: 88 },
+          { name: 'PowerPoint', level: 85 },
+          { name: 'Outlook', level: 82 }
+        ]
       },
     ],
     projectsTitle: 'Proyek Unggulan',
+    projects: [
+      {
+        title: 'Portofolio Web Modern',
+        description: 'Website portofolio responsif yang dibangun dengan React dan prinsip desain modern dengan fitur bilingual dan mode gelap.',
+        tech: 'React • CSS • JavaScript'
+      },
+      {
+        title: 'Algoritma Struktur Data',
+        description: 'Koleksi algoritma dan struktur data yang efisien diimplementasikan dalam bahasa pemrograman C untuk tujuan edukasi.',
+        tech: 'C • Algoritma • Struktur Data'
+      },
+      {
+        title: 'Analitik Digital Marketing',
+        description: 'Analisis SEO komprehensif dan implementasi strategi digital marketing untuk meningkatkan visibilitas online.',
+        tech: 'SEO • Analytics • Digital Marketing'
+      }
+    ],
     certificationsTitle: 'Sertifikasi',
     certifications: [
       {
@@ -389,7 +533,7 @@ const content = {
         status: 'Aktif',
         credentialId: 'No. 62090 2431 0 0034390 2022',
         description: 'Sertifikasi profesional dalam strategi pemasaran digital, manajemen media sosial, dan kampanye iklan online.',
-        skills: ['Digital Marketing', 'Manajemen Media Sosial', 'Periklanan Online', 'Analitik Pemasaran']
+        skills: ['Pemasaran Digital', 'Manajemen Media Sosial', 'Periklanan Online', 'Analitik Pemasaran']
       },
       {
         title: 'Software Engineering',
@@ -399,6 +543,15 @@ const content = {
         credentialId: 'No. 62010 3514 2 0001413 2023',
         description: 'Sertifikasi profesional dalam software engineering dengan kualifikasi dalam pengembangan perangkat lunak dan praktik rekayasa.',
         skills: ['Pengembangan Perangkat Lunak', 'Pemrograman', 'Desain Sistem', 'Rekayasa Perangkat Lunak']
+      },
+      {
+        title: 'Asisten Laboratorium Struktur Data',
+        issuer: 'Universitas Jenderal Soedirman - Fakultas Teknik/Informatika',
+        year: '2025',
+        status: 'Aktif',
+        credentialId: 'Tahun Akademik 2024/2025',
+        description: 'Sertifikat resmi sebagai Asisten Laboratorium Struktur Data untuk Tahun Akademik 2024/2025, berwenang membantu dalam praktikum mata kuliah Struktur Data di bawah pengawasan Bangun Wijayanto.',
+        skills: ['Struktur Data', 'Pemrograman C', 'Pengajaran', 'Manajemen Laboratorium']
       }
     ],
     contactTitle: 'Mari Berkenalan',
@@ -411,7 +564,34 @@ const content = {
 function App() {
   const [lang, setLang] = useState('id');
   const [darkMode, setDarkMode] = useState(true); // Default dark mode
+  const [skillsVisible, setSkillsVisible] = useState(false);
+  const skillsRef = useRef(null);
   const t = content[lang];
+
+  // Intersection Observer for skills animation
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setSkillsVisible(true);
+        }
+      },
+      {
+        threshold: 0.3,
+      }
+    );
+
+    const currentRef = skillsRef.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, []);
 
   // Smooth scroll function
   const scrollToSection = (sectionId) => {
@@ -459,8 +639,8 @@ function App() {
             <p className="hero-subtitle">{t.subtitle}</p>
             <p className="hero-description">{t.description}</p>
             <div className="hero-buttons">
-              <button className="btn btn-primary" onClick={() => scrollToSection('projects')}>{lang === 'id' ? 'Lihat Karya Saya' : 'View My Work'}</button>
-              <button className="btn btn-secondary" onClick={() => scrollToSection('contact')}>{lang === 'id' ? 'Hubungi Saya' : 'Contact Me'}</button>
+              <button className="btn btn-primary" onClick={() => scrollToSection('experience')}>{lang === 'id' ? 'Lihat Pengalaman Saya' : 'View My Experience'}</button>
+              <button className="btn btn-secondary" onClick={() => scrollToSection('certifications')}>{lang === 'id' ? 'Lihat Sertifikasi' : 'View Certifications'}</button>
             </div>
           </div>
           <div className="hero-visual">
@@ -617,7 +797,7 @@ function App() {
       </section>
 
       {/* Skills Section */}
-      <section className="skills-section" id="skills">
+      <section className="skills-section" id="skills" ref={skillsRef}>
         <div className="container">
           <h3 className="section-title">{t.skillsTitle}</h3>
           <div className="skills-grid">
@@ -627,16 +807,35 @@ function App() {
                   <div className="skill-icon">
                     {idx === 0 ? <FaPalette /> : 
                      idx === 1 ? <FaCode /> : 
-                     idx === 2 ? <FaBrain /> : 
-                     idx === 3 ? <FaDatabase /> : 
-                     idx === 4 ? <FaGitAlt /> : 
-                     idx === 5 ? <FaBullhorn /> :
-                     idx === 6 ? <FaSearch /> :
+                     idx === 2 ? <FaServer /> : 
+                     idx === 3 ? <FaBrain /> : 
+                     idx === 4 ? <FaDatabase /> : 
+                     idx === 5 ? <FaGitAlt /> : 
+                     idx === 6 ? <FaBullhorn /> :
+                     idx === 7 ? <FaSearch /> :
                      <FaMicrosoft />}
                   </div>
                   <h4 className="skill-title">{skill.title}</h4>
                   <p className="skill-desc">{skill.desc}</p>
-                  <div className="skill-tech">{skill.tech}</div>
+                  <div className="skill-techs">
+                    {skill.techs.map((tech, techIdx) => (
+                      <div key={techIdx} className="tech-item">
+                        <div className="tech-info">
+                          <span className="tech-name">{tech.name}</span>
+                          <span className="tech-level">{tech.level}%</span>
+                        </div>
+                        <div className="tech-progress-bar">
+                          <div 
+                            className={`tech-progress-fill ${skillsVisible ? 'animate' : ''}`}
+                            style={{ 
+                              width: skillsVisible ? `${tech.level}%` : '0%',
+                              transitionDelay: `${(idx * 4 + techIdx) * 0.1}s`
+                            }}
+                          />
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               ))}
             </div>
@@ -649,30 +848,20 @@ function App() {
         <div className="container">
           <h3 className="section-title">{t.projectsTitle}</h3>
           <div className="projects-grid">
-            <div className="project-card">
-              <div className="project-image"><FaRocket /></div>
-              <div className="project-content">
-                <h4>Modern Web App</h4>
-                <p>A responsive web application built with React and modern design principles.</p>
-                <div className="project-tech">React • CSS • JavaScript</div>
+            {t.projects.map((project, idx) => (
+              <div className="project-card" key={idx}>
+                <div className="project-image">
+                  {idx === 0 ? <FaRocket /> : 
+                   idx === 1 ? <FaLightbulb /> : 
+                   <FaBullhorn />}
+                </div>
+                <div className="project-content">
+                  <h4>{project.title}</h4>
+                  <p>{project.description}</p>
+                  <div className="project-tech">{project.tech}</div>
+                </div>
               </div>
-            </div>
-            <div className="project-card">
-              <div className="project-image"><FaMobile /></div>
-              <div className="project-content">
-                <h4>UI/UX Design</h4>
-                <p>Complete design system and user experience for mobile application.</p>
-                <div className="project-tech">Figma • Prototyping • User Research</div>
-              </div>
-            </div>
-            <div className="project-card">
-              <div className="project-image"><FaLightbulb /></div>
-              <div className="project-content">
-                <h4>Algorithm Solutions</h4>
-                <p>Efficient algorithms and data structures implemented in multiple languages.</p>
-                <div className="project-tech">Python • Java • C++</div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -738,7 +927,7 @@ function App() {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>&copy; 2025 {t.name}. All rights reserved.</p>
+          <p>&copy; 2025 {t.name}. {lang === 'id' ? 'Seluruh hak cipta dilindungi.' : 'All rights reserved.'}</p>
         </div>
       </footer>
     </div>
