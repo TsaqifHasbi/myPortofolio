@@ -120,7 +120,7 @@ const content = {
     education: [
       {
         institution: 'Jenderal Soedirman University',
-        degree: 'Bachelor of Computer Science (Informatics)',
+        degree: 'Bachelor of Computer Science - Informatics (B.Sc)',
         year: '2023 - Present',
         description: 'Currently pursuing a degree in Informatics with focus on software development, algorithms, and computer systems.',
         gpa: 'GPA 3.7/4.0',
@@ -390,7 +390,7 @@ const content = {
     education: [
       {
         institution: 'Universitas Jenderal Soedirman',
-        degree: 'Sarjana Komputer (Informatika)',
+        degree: 'Sarjana Komputer - Informatika (S.Kom)',
         year: '2023 - Sekarang',
         description: 'Sedang menempuh pendidikan Sarjana Komputer jurusan Informatika dengan fokus pada pengembangan perangkat lunak, algoritma, dan sistem komputer.',
         gpa: 'IPK 3.7/4.0',
