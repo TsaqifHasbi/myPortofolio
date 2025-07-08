@@ -165,7 +165,7 @@ const content = {
         desc: 'Building responsive and interactive websites using fundamental web technologies and core programming languages.',
         techs: [
           { name: 'HTML', level: 95 },
-          { name: 'CSS', level: 92 },
+          { name: 'CSS', level: 90 },
           { name: 'JavaScript', level: 88 },
           { name: 'DOM Manipulation', level: 85 },
           { name: 'Web APIs', level: 80 }
@@ -344,7 +344,7 @@ const content = {
           'Pemantauan Tren: Mengikuti perkembangan terbaru dalam SEO',
           'Manajemen Proyek: Mengelola proyek SEO dari awal hingga akhir'
         ],
-        technologies: ['SEO', 'Pemasaran Digital', 'Kepemimpinan Tim', 'Analytics']
+        technologies: ['SEO', 'Digital Marketing', 'Team Leadership', 'Analytics']
       },
       {
         title: 'BEM FT UNSOED',
@@ -360,7 +360,7 @@ const content = {
           'Membimbing mahasiswa menghadapi kompetisi di tingkat universitas dan antar-universitas',
           'Mendapat penghargaan Staff Terbaik Bulan Juni 2024 karena kerja keras dan dedikasi yang luar biasa'
         ],
-        technologies: ['Manajemen Acara', 'Kepemimpinan', 'Manajemen Proyek']
+        technologies: ['Event Management', 'Leadership', 'Project Management']
       },
       {
         title: 'BEM FT UNSOED',
@@ -375,7 +375,7 @@ const content = {
           'Menyelesaikan seluruh persiapan logistik dan teknis secara profesional dan tepat waktu',
           'Memperkuat solidaritas, semangat sportivitas, dan kebanggaan mahasiswa Fakultas Teknik'
         ],
-        technologies: ['Komunikasi', 'Keterampilan Koordinasi', 'Manajemen Acara']
+        technologies: ['Communication', 'Coordination Skills', 'Event Management']
       },
       {
         title: 'HMIF UNSOED',
@@ -391,7 +391,7 @@ const content = {
           'Memimpin program rekrutmen dan orientasi anggota baru HMIF',
           'Mengimplementasikan sistem penilaian kemampuan dan tracking sertifikasi untuk anggota'
         ],
-        technologies: ['Kepemimpinan', 'Manajemen Pelatihan', 'Pengembangan SDM', 'Koordinasi Program']
+        technologies: ['Leadership', 'Training Management', 'Human Resource Development', 'Program Coordination']
       },
       {
         title: 'Universitas Jenderal Soedirman',
@@ -407,7 +407,7 @@ const content = {
           'Menjaga ketertiban dan kelancaran saat berlangsungnya sesi praktikum',
           'Menyelesaikan periode pengajaran intensif 3 bulan dengan feedback positif dari mahasiswa'
         ],
-        technologies: ['Bahasa Pemrograman C', 'Komunikasi', 'Pengajaran']
+        technologies: ['C Programming Language', 'Communication', 'Teaching']
       }
     ],
     education: [
@@ -456,9 +456,9 @@ const content = {
         desc: 'Membangun website responsif dan interaktif menggunakan teknologi web fundamental dan bahasa pemrograman inti.',
         techs: [
           { name: 'HTML', level: 95 },
-          { name: 'CSS', level: 92 },
+          { name: 'CSS', level: 90 },
           { name: 'JavaScript', level: 88 },
-          { name: 'Manipulasi DOM', level: 85 },
+          { name: 'DOM Manipulation', level: 85 },
           { name: 'Web APIs', level: 80 }
         ]
       },
@@ -468,7 +468,7 @@ const content = {
         techs: [
           { name: 'ReactJS', level: 85 },
           { name: 'VueJS', level: 50 },
-          { name: 'Arsitektur Komponen', level: 82 },
+          { name: 'Component Architecture', level: 82 },
           { name: 'State Management', level: 78 }
         ]
       },
@@ -506,9 +506,9 @@ const content = {
         desc: 'Merancang dan mengelola database dengan optimisasi query yang efisien dan pemodelan data.',
         techs: [
           { name: 'MySQL', level: 88 },
-          { name: 'Query SQL', level: 85 },
-          { name: 'Desain Database', level: 80 },
-          { name: 'Pemodelan Data', level: 78 }
+          { name: 'SQL Queries', level: 85 },
+          { name: 'Database Design', level: 80 },
+          { name: 'Data Modeling', level: 78 }
         ]
       },
       { 
@@ -517,27 +517,27 @@ const content = {
         techs: [
           { name: 'Git', level: 92 },
           { name: 'GitHub', level: 88 },
-          { name: 'Kolaborasi', level: 85 },
-          { name: 'Manajemen Branch', level: 82 }
+          { name: 'Collaboration', level: 85 },
+          { name: 'Branch Management', level: 82 }
         ]
       },
       { 
         title: 'Digital Marketing', 
         desc: 'Mengembangkan strategi pemasaran digital yang komprehensif termasuk manajemen media sosial, optimisasi SEO, dan kampanye iklan Google.',
         techs: [
-          { name: 'Media Sosial', level: 90 },
+          { name: 'Social Media', level: 90 },
           { name: 'Google Ads', level: 88 },
           { name: 'Analytics', level: 85 },
-          { name: 'Strategi Konten', level: 83 }
+          { name: 'Content Strategy', level: 83 }
         ]
       },
       { 
         title: 'SEO', 
         desc: 'Mengoptimalkan website untuk mesin pencari guna meningkatkan visibilitas, ranking, dan traffic organik melalui riset kata kunci dan optimisasi teknis.',
         techs: [
-          { name: 'Riset Kata Kunci', level: 95 },
-          { name: 'SEO On-Page', level: 92 },
-          { name: 'SEO Teknis', level: 88 },
+          { name: 'Keyword Research', level: 95 },
+          { name: 'On-Page SEO', level: 92 },
+          { name: 'Technical SEO', level: 88 },
           { name: 'Analytics', level: 85 }
         ]
       },
