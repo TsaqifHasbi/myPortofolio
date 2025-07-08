@@ -167,7 +167,6 @@ const content = {
           { name: 'HTML', level: 95 },
           { name: 'CSS', level: 90 },
           { name: 'JavaScript', level: 88 },
-          { name: 'DOM Manipulation', level: 85 },
           { name: 'Web APIs', level: 80 }
         ]
       },
@@ -458,7 +457,6 @@ const content = {
           { name: 'HTML', level: 95 },
           { name: 'CSS', level: 90 },
           { name: 'JavaScript', level: 88 },
-          { name: 'DOM Manipulation', level: 85 },
           { name: 'Web APIs', level: 80 }
         ]
       },
