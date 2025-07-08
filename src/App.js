@@ -690,6 +690,9 @@ function App() {
               <div className="shape shape-1"></div>
               <div className="shape shape-2"></div>
               <div className="shape shape-3"></div>
+              <div className="shape shape-4"></div>
+              <div className="shape shape-5"></div>
+              <div className="shape shape-6"></div>
             </div>
             <h1 className="hero-name">{t.name}</h1>
             <h2 className="hero-title">{t.title}</h2>

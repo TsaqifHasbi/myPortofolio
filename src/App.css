@@ -287,8 +287,8 @@ body {
   width: 100px;
   height: 100px;
   background: var(--accent-color);
-  top: 10%;
-  left: 10%;
+  top: 2%;
+  left: 2%;
   animation-delay: 0s;
 }
 
@@ -296,8 +296,8 @@ body {
   width: 150px;
   height: 150px;
   background: var(--accent-color);
-  top: 20%;
-  right: 15%;
+  top: 8%;
+  right: 3%;
   animation-delay: 2s;
 }
 
@@ -305,9 +305,36 @@ body {
   width: 80px;
   height: 80px;
   background: var(--accent-color);
-  bottom: 30%;
-  left: 20%;
+  bottom: 25%;
+  left: 8%;
   animation-delay: 4s;
+}
+
+.shape-4 {
+  width: 120px;
+  height: 120px;
+  background: var(--accent-color);
+  bottom: 5%;
+  right: 2%;
+  animation-delay: 1s;
+}
+
+.shape-5 {
+  width: 60px;
+  height: 60px;
+  background: var(--accent-color);
+  top: 65%;
+  right: 30%;
+  animation-delay: 3s;
+}
+
+.shape-6 {
+  width: 90px;
+  height: 90px;
+  background: var(--accent-color);
+  top: 35%;
+  left: 3%;
+  animation-delay: 5s;
 }
 
 .hero-content-centered .hero-name {
@@ -550,6 +577,21 @@ body {
   .shape-3 {
     width: 50px;
     height: 50px;
+  }
+  
+  .shape-4 {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .shape-5 {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .shape-6 {
+    width: 55px;
+    height: 55px;
   }
   
   .hero-dots {
