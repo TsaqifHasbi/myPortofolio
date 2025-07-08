@@ -1595,16 +1595,18 @@ body {
   }
   
   .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem;
   }
   
   .skills-row {
-    display: block;
+    display: contents;
   }
   
   .skill-card {
     width: 100%;
-    max-width: 350px;
+    max-width: 100%;
+    padding: 1.5rem;
   }
   
   .projects-grid {
@@ -1661,6 +1663,12 @@ body {
   
   .skill-card {
     padding: 1.5rem;
+  }
+  
+  /* Ensure skills grid always shows 2 columns on very small screens */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.8rem;
   }
 }
 
@@ -1867,24 +1875,26 @@ body {
 /* Experience Responsive */
 @media (max-width: 768px) {
   .experience-timeline::before {
-    left: 30px;
+    display: none;
+  }
+  
+  .experience-line {
+    display: none;
+  }
+  
+  .experience-dot {
+    display: none;
   }
   
   .experience-item {
     flex-direction: column !important;
-    padding-left: 60px;
-    margin: 3rem 0;
+    padding-left: 0;
+    margin: 2rem 0;
   }
   
   .experience-item:nth-child(odd),
   .experience-item:nth-child(even) {
     flex-direction: column;
-  }
-  
-  .experience-line {
-    left: 30px;
-    transform: none;
-    top: 2rem;
   }
   
   .experience-content {
@@ -1909,15 +1919,7 @@ body {
   
   .experience-item:nth-child(odd) .experience-content::after,
   .experience-item:nth-child(even) .experience-content::after {
-    content: '';
-    position: absolute;
-    top: 2rem;
-    left: -10px;
-    width: 0;
-    height: 0;
-    border-right: 10px solid var(--card-bg);
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
+    display: none;
   }
 }
 
@@ -1928,13 +1930,13 @@ body {
   }
   
   .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
     margin-top: 2rem;
   }
   
   .skill-card {
-    padding: 2rem;
+    padding: 1.5rem;
     max-width: 100%;
   }
   
