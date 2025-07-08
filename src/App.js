@@ -562,7 +562,7 @@ const content = {
       {
         title: 'Algoritma Struktur Data',
         description: 'Koleksi algoritma dan struktur data yang efisien diimplementasikan dalam bahasa pemrograman C untuk tujuan edukasi.',
-        tech: 'C • Algoritma • Struktur Data'
+        tech: 'C • Algorithms • Data Structures'
       },
       {
         title: 'Analitik Digital Marketing',
@@ -685,7 +685,12 @@ function App() {
       {/* Hero Section */}
       <header className="hero-section" id="home">
         <div className="hero-container">
-          <div className="hero-content">
+          <div className="hero-content-centered">
+            <div className="hero-decorative-shapes">
+              <div className="shape shape-1"></div>
+              <div className="shape shape-2"></div>
+              <div className="shape shape-3"></div>
+            </div>
             <h1 className="hero-name">{t.name}</h1>
             <h2 className="hero-title">{t.title}</h2>
             <p className="hero-subtitle">{t.subtitle}</p>
@@ -693,20 +698,6 @@ function App() {
             <div className="hero-buttons">
               <button className="btn btn-primary" onClick={() => scrollToSection('experience')}>{lang === 'id' ? 'Lihat Pengalaman Saya' : 'View My Experience'}</button>
               <button className="btn btn-secondary" onClick={() => scrollToSection('certifications')}>{lang === 'id' ? 'Lihat Sertifikasi' : 'View Certifications'}</button>
-            </div>
-          </div>
-          <div className="hero-visual">
-            <div className="hero-avatar">
-              <img 
-                src="/tsf.jpg" 
-                alt="Tsaqif Hasbi Aghna Syarief" 
-                className="avatar-image"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  e.target.nextSibling.style.display = 'flex';
-                }}
-              />
-              <div className="avatar-placeholder" style={{display: 'none'}}><FaUser /></div>
             </div>
           </div>
         </div>
