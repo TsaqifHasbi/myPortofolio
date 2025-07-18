@@ -4,7 +4,7 @@ import {
   FaPalette,
   FaCode,
   FaRocket,
-  FaLightbulb,
+  // FaLightbulb,
   FaEnvelope,
   FaLinkedin,
   FaGithub,
