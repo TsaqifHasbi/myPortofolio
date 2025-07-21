@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
-import {
-  FaPalette,
-  FaCode,
-  FaRocket,
-  // FaLightbulb,
+import { 
+  FaPalette, 
+  FaCode, 
+  FaRocket, 
+  FaLightbulb,
   FaEnvelope,
   FaLinkedin,
   FaGithub,
@@ -150,8 +150,8 @@ const content = {
     ],
     skillsTitle: 'My Skills',
     skills: [
-      {
-        title: 'UI/UX Design',
+      { 
+        title: 'UI/UX Design', 
         desc: 'Creating intuitive and beautiful user interfaces using Figma, Canva, and modern design principles.',
         techs: [
           { name: 'Figma', level: 90 },
@@ -160,8 +160,8 @@ const content = {
           { name: 'Adobe Illustrator', level: 82 }
         ]
       },
-      {
-        title: 'Web Development',
+      { 
+        title: 'Web Development', 
         desc: 'Building responsive and interactive websites using fundamental web technologies and core programming languages.',
         techs: [
           { name: 'HTML', level: 95 },
@@ -170,8 +170,8 @@ const content = {
           { name: 'Web APIs', level: 80 }
         ]
       },
-      {
-        title: 'JavaScript Frameworks',
+      { 
+        title: 'JavaScript Frameworks', 
         desc: 'Building dynamic and interactive web applications using modern JavaScript frameworks and libraries for component-based development.',
         techs: [
           { name: 'ReactJS', level: 85 },
@@ -180,8 +180,8 @@ const content = {
           { name: 'State Management', level: 78 }
         ]
       },
-      {
-        title: 'Frontend Frameworks',
+      { 
+        title: 'Frontend Frameworks', 
         desc: 'Building modern and responsive user interfaces using popular CSS frameworks and utility-first libraries for rapid development.',
         techs: [
           { name: 'Bootstrap', level: 88 },
@@ -190,8 +190,8 @@ const content = {
           { name: 'Material-UI', level: 10 }
         ]
       },
-      {
-        title: 'Backend Frameworks',
+      { 
+        title: 'Backend Frameworks', 
         desc: 'Developing robust web applications using modern backend frameworks for efficient server-side development.',
         techs: [
           { name: 'CodeIgniter', level: 82 },
@@ -199,8 +199,8 @@ const content = {
           { name: 'AdonisJS', level: 75 }
         ]
       },
-      {
-        title: 'Programming Logic',
+      { 
+        title: 'Programming Logic', 
         desc: 'Developing efficient algorithms and solutions using various programming languages.',
         techs: [
           { name: 'C', level: 95 },
@@ -209,8 +209,8 @@ const content = {
           { name: 'Java (OOP)', level: 82 }
         ]
       },
-      {
-        title: 'Database & SQL',
+      { 
+        title: 'Database & SQL', 
         desc: 'Designing and managing databases with efficient query optimization and data modeling.',
         techs: [
           { name: 'MySQL', level: 88 },
@@ -219,8 +219,8 @@ const content = {
           { name: 'Data Modeling', level: 78 }
         ]
       },
-      {
-        title: 'Version Control',
+      { 
+        title: 'Version Control', 
         desc: 'Managing code versions and collaboration using Git and GitHub for efficient project development.',
         techs: [
           { name: 'Git', level: 92 },
@@ -229,8 +229,8 @@ const content = {
           { name: 'Branch Management', level: 82 }
         ]
       },
-      {
-        title: 'Digital Marketing',
+      { 
+        title: 'Digital Marketing', 
         desc: 'Developing comprehensive digital marketing strategies including social media management, SEO optimization, and Google advertising campaigns.',
         techs: [
           { name: 'Social Media', level: 90 },
@@ -239,8 +239,8 @@ const content = {
           { name: 'Content Strategy', level: 83 }
         ]
       },
-      {
-        title: 'SEO',
+      { 
+        title: 'SEO', 
         desc: 'Optimizing websites for search engines to improve visibility, ranking, and organic traffic through keyword research and technical optimization.',
         techs: [
           { name: 'Keyword Research', level: 95 },
@@ -249,8 +249,8 @@ const content = {
           { name: 'Analytics', level: 85 }
         ]
       },
-      {
-        title: 'Microsoft Office',
+      { 
+        title: 'Microsoft Office', 
         desc: 'Proficient in Microsoft Office suite for productivity, data analysis, and professional documentation with advanced features and automation.',
         techs: [
           { name: 'Excel', level: 92 },
@@ -262,20 +262,34 @@ const content = {
     ],
     projectsTitle: 'Featured Projects',
     projects: [
+      // {
+      //   title: 'Modern Web Portfolio',
+      //   description: 'A responsive portfolio website built with React and modern design principles featuring bilingual support and dark mode.',
+      //   tech: 'React • CSS • JavaScript'
+      // },
+      // {
+      //   title: 'Data Structure Algorithms',
+      //   description: 'Collection of efficient algorithms and data structures implemented in C programming language for educational purposes.',
+      //   tech: 'C • Algorithms • Data Structures'
+      // },
+      // {
+      //   title: 'Digital Marketing Analytics',
+      //   description: 'Comprehensive SEO analysis and digital marketing strategy implementation for improving online visibility.',
+      //   tech: 'SEO • Analytics • Digital Marketing'
+      // },
       {
-        title: 'Modern Web Portfolio',
-        description: 'A responsive portfolio website built with React and modern design principles featuring bilingual support and dark mode.',
-        tech: 'React • CSS • JavaScript'
+        title: 'To-DoList GUI Python',
+        description: 'A desktop To-Do List application built with Python and Tkinter, featuring a modern GUI for task management. Open source and available on GitHub.',
+        tech: 'Python • Tkinter • GUI',
+        link: 'https://github.com/TsaqifHasbi/To-DoList-GUI-Python',
+        linkLabel: 'View on GitHub'
       },
       {
-        title: 'Data Structure Algorithms',
-        description: 'Collection of efficient algorithms and data structures implemented in C programming language for educational purposes.',
-        tech: 'C • Algorithms • Data Structures'
-      },
-      {
-        title: 'Digital Marketing Analytics',
-        description: 'Comprehensive SEO analysis and digital marketing strategy implementation for improving online visibility.',
-        tech: 'SEO • Analytics • Digital Marketing'
+        title: 'ASPIRASI UNSOED',
+        description: 'Designing a web application for student aspirations at Jenderal Soedirman University. UI/UX designed in Figma, focusing on accessibility and modern design.',
+        tech: 'Figma • UI/UX • Web App',
+        link: 'https://www.figma.com/design/6VDx18k2VYqC1PVqLZvMcT/ASPIRASI-UNSOED?node-id=0-1&t=T1T1KUNjsBeyiaBL-1',
+        linkLabel: 'See Figma'
       }
     ],
     certificationsTitle: 'Certifications',
@@ -440,8 +454,8 @@ const content = {
     ],
     skillsTitle: 'Keahlian Saya',
     skills: [
-      {
-        title: 'Desain UI/UX',
+      { 
+        title: 'Desain UI/UX', 
         desc: 'Menciptakan antarmuka pengguna yang intuitif dan indah menggunakan Figma, Canva, dan prinsip desain modern.',
         techs: [
           { name: 'Figma', level: 90 },
@@ -450,8 +464,8 @@ const content = {
           { name: 'Adobe Illustrator', level: 82 }
         ]
       },
-      {
-        title: 'Pengembangan Web',
+      { 
+        title: 'Pengembangan Web', 
         desc: 'Membangun website responsif dan interaktif menggunakan teknologi web fundamental dan bahasa pemrograman inti.',
         techs: [
           { name: 'HTML', level: 95 },
@@ -460,8 +474,8 @@ const content = {
           { name: 'Web APIs', level: 80 }
         ]
       },
-      {
-        title: 'JavaScript Frameworks',
+      { 
+        title: 'JavaScript Frameworks', 
         desc: 'Membangun aplikasi web yang dinamis dan interaktif menggunakan framework JavaScript modern dan library untuk pengembangan berbasis komponen.',
         techs: [
           { name: 'ReactJS', level: 85 },
@@ -470,8 +484,8 @@ const content = {
           { name: 'State Management', level: 78 }
         ]
       },
-      {
-        title: 'Framework Frontend',
+      { 
+        title: 'Framework Frontend', 
         desc: 'Membangun antarmuka pengguna yang modern dan responsif menggunakan framework CSS populer dan utility-first libraries untuk pengembangan yang cepat.',
         techs: [
           { name: 'Bootstrap', level: 88 },
@@ -480,8 +494,8 @@ const content = {
           { name: 'Material-UI', level: 10 }
         ]
       },
-      {
-        title: 'Framework Backend',
+      { 
+        title: 'Framework Backend', 
         desc: 'Mengembangkan aplikasi web yang robust menggunakan framework backend modern untuk pengembangan sisi server yang efisien.',
         techs: [
           { name: 'CodeIgniter', level: 82 },
@@ -489,8 +503,8 @@ const content = {
           { name: 'AdonisJS', level: 75 }
         ]
       },
-      {
-        title: 'Pemrograman Logika',
+      { 
+        title: 'Pemrograman Logika', 
         desc: 'Mengembangkan algoritma dan solusi yang efisien menggunakan berbagai bahasa pemrograman.',
         techs: [
           { name: 'C', level: 95 },
@@ -499,8 +513,8 @@ const content = {
           { name: 'Java (OOP)', level: 82 }
         ]
       },
-      {
-        title: 'Database & SQL',
+      { 
+        title: 'Database & SQL', 
         desc: 'Merancang dan mengelola database dengan optimisasi query yang efisien dan pemodelan data.',
         techs: [
           { name: 'MySQL', level: 88 },
@@ -509,8 +523,8 @@ const content = {
           { name: 'Data Modeling', level: 78 }
         ]
       },
-      {
-        title: 'Version Control',
+      { 
+        title: 'Version Control', 
         desc: 'Mengelola versi kode dan kolaborasi menggunakan Git dan GitHub untuk pengembangan proyek yang efisien.',
         techs: [
           { name: 'Git', level: 92 },
@@ -519,8 +533,8 @@ const content = {
           { name: 'Branch Management', level: 82 }
         ]
       },
-      {
-        title: 'Digital Marketing',
+      { 
+        title: 'Digital Marketing', 
         desc: 'Mengembangkan strategi pemasaran digital yang komprehensif termasuk manajemen media sosial, optimisasi SEO, dan kampanye iklan Google.',
         techs: [
           { name: 'Social Media', level: 90 },
@@ -529,8 +543,8 @@ const content = {
           { name: 'Content Strategy', level: 83 }
         ]
       },
-      {
-        title: 'SEO',
+      { 
+        title: 'SEO', 
         desc: 'Mengoptimalkan website untuk mesin pencari guna meningkatkan visibilitas, ranking, dan traffic organik melalui riset kata kunci dan optimisasi teknis.',
         techs: [
           { name: 'Keyword Research', level: 95 },
@@ -539,8 +553,8 @@ const content = {
           { name: 'Analytics', level: 85 }
         ]
       },
-      {
-        title: 'Microsoft Office',
+      { 
+        title: 'Microsoft Office', 
         desc: 'Mahir menggunakan suite Microsoft Office untuk produktivitas, analisis data, dan dokumentasi profesional dengan fitur-fitur canggih dan otomasi.',
         techs: [
           { name: 'Excel', level: 92 },
@@ -552,20 +566,34 @@ const content = {
     ],
     projectsTitle: 'Proyek Unggulan',
     projects: [
+      // {
+      //   title: 'Portofolio Web Modern',
+      //   description: 'Website portofolio responsif yang dibangun dengan React dan prinsip desain modern dengan fitur bilingual dan mode gelap.',
+      //   tech: 'React • CSS • JavaScript'
+      // },
+      // {
+      //   title: 'Algoritma Struktur Data',
+      //   description: 'Koleksi algoritma dan struktur data yang efisien diimplementasikan dalam bahasa pemrograman C untuk tujuan edukasi.',
+      //   tech: 'C • Algorithms • Data Structures'
+      // },
+      // {
+      //   title: 'Analitik Digital Marketing',
+      //   description: 'Analisis SEO komprehensif dan implementasi strategi digital marketing untuk meningkatkan visibilitas online.',
+      //   tech: 'SEO • Analytics • Digital Marketing'
+      // },
       {
-        title: 'Portofolio Web Modern',
-        description: 'Website portofolio responsif yang dibangun dengan React dan prinsip desain modern dengan fitur bilingual dan mode gelap.',
-        tech: 'React • CSS • JavaScript'
+        title: 'To-DoList GUI Python',
+        description: 'Aplikasi To-Do List desktop yang dibuat dengan Python dan Tkinter, memiliki tampilan GUI modern untuk manajemen tugas. Open source dan tersedia di GitHub.',
+        tech: 'Python • Tkinter • GUI',
+        link: 'https://github.com/TsaqifHasbi/To-DoList-GUI-Python',
+        linkLabel: 'Lihat di GitHub'
       },
       {
-        title: 'Algoritma Struktur Data',
-        description: 'Koleksi algoritma dan struktur data yang efisien diimplementasikan dalam bahasa pemrograman C untuk tujuan edukasi.',
-        tech: 'C • Algorithms • Data Structures'
-      },
-      {
-        title: 'Analitik Digital Marketing',
-        description: 'Analisis SEO komprehensif dan implementasi strategi digital marketing untuk meningkatkan visibilitas online.',
-        tech: 'SEO • Analytics • Digital Marketing'
+        title: 'ASPIRASI UNSOED',
+        description: 'Perancangan Aplikasi web aspirasi mahasiswa Universitas Jenderal Soedirman. UI/UX didesain di Figma, fokus pada aksesibilitas dan desain modern.',
+        tech: 'Figma • UI/UX • Web App',
+        link: 'https://www.figma.com/design/6VDx18k2VYqC1PVqLZvMcT/ASPIRASI-UNSOED?node-id=0-1&t=T1T1KUNjsBeyiaBL-1',
+        linkLabel: 'Lihat Figma'
       }
     ],
     certificationsTitle: 'Sertifikasi',
@@ -719,16 +747,16 @@ function App() {
                 </div>
                 <div className="about-main-circle">
                   <div className="about-avatar">
-                    <img
-                      src="/tsf.jpg"
-                      alt="Tsaqif Hasbi Aghna Syarief"
+                    <img 
+                      src="/tsf.jpg" 
+                      alt="Tsaqif Hasbi Aghna Syarief" 
                       className="about-avatar-image"
                       onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.nextSibling.style.display = 'flex';
                       }}
                     />
-                    <div className="about-avatar-placeholder" style={{ display: 'none' }}>
+                    <div className="about-avatar-placeholder" style={{display: 'none'}}>
                       <FaUser />
                     </div>
                   </div>
@@ -740,7 +768,7 @@ function App() {
                 <div className="about-paragraph">
                   <p className="paragraph-text">{t.whoAmI}</p>
                 </div>
-
+                
                 <div className="about-paragraph">
                   <p className="paragraph-text">{t.myApproach}</p>
                 </div>
@@ -833,17 +861,17 @@ function App() {
               {t.skills.map((skill, idx) => (
                 <div className="skill-card" key={idx}>
                   <div className="skill-icon">
-                    {idx === 0 ? <FaPalette /> :
-                      idx === 1 ? <FaCode /> :
-                        idx === 2 ? <FaReact /> :
-                          idx === 3 ? <FaRocket /> :
-                            idx === 4 ? <FaServer /> :
-                              idx === 5 ? <FaBrain /> :
-                                idx === 6 ? <FaDatabase /> :
-                                  idx === 7 ? <FaGitAlt /> :
-                                    idx === 8 ? <FaBullhorn /> :
-                                      idx === 9 ? <FaSearch /> :
-                                        <FaMicrosoft />}
+                    {idx === 0 ? <FaPalette /> : 
+                     idx === 1 ? <FaCode /> : 
+                     idx === 2 ? <FaReact /> : 
+                     idx === 3 ? <FaRocket /> : 
+                     idx === 4 ? <FaServer /> : 
+                     idx === 5 ? <FaBrain /> : 
+                     idx === 6 ? <FaDatabase /> : 
+                     idx === 7 ? <FaGitAlt /> : 
+                     idx === 8 ? <FaBullhorn /> :
+                     idx === 9 ? <FaSearch /> :
+                     <FaMicrosoft />}
                   </div>
                   <h4 className="skill-title">{skill.title}</h4>
                   <p className="skill-desc">{skill.desc}</p>
@@ -862,9 +890,9 @@ function App() {
                           overflow: 'hidden',
                           marginTop: '4px'
                         }}>
-                          <div
+                          <div 
                             className={`tech-progress-fill ${skillsVisible ? 'animate' : ''}`}
-                            style={{
+                            style={{ 
                               width: skillsVisible ? `${tech.level}%` : '0%',
                               height: '100%',
                               backgroundColor: '#007bff',
@@ -885,7 +913,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-      {/* <section className="projects-section" id="projects">
+      <section className="projects-section" id="projects">
         <div className="container">
           <h3 className="section-title">{t.projectsTitle}</h3>
           <div className="projects-grid">
@@ -900,12 +928,75 @@ function App() {
                   <h4>{project.title}</h4>
                   <p>{project.description}</p>
                   <div className="project-tech">{project.tech}</div>
+                  <div className="project-attachments" style={{ display: 'flex', gap: '0.75rem', marginTop: '0.75rem', flexWrap: 'wrap' }}>
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link-btn"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          padding: '0.5rem 1.2rem',
+                          borderRadius: '6px',
+                          background: '#007bff',
+                          color: '#fff',
+                          fontWeight: 500,
+                          fontSize: '0.98rem',
+                          textDecoration: 'none',
+                          boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+                          transition: 'background 0.2s',
+                          border: 'none',
+                        }}
+                        onMouseOver={e => e.currentTarget.style.background = '#0056b3'}
+                        onMouseOut={e => e.currentTarget.style.background = '#007bff'}
+                      >
+                        <span style={{ marginRight: '0.5rem', fontSize: '1.1em' }}>🔗</span>
+                        {project.linkLabel || 'Lihat Project'}
+                      </a>
+                    )}
+                    {project.file && (
+                      <div
+                        className="project-file-attachment"
+                        style={{
+                          display: 'inline-flex',
+                          alignItems: 'center',
+                          padding: '0.5rem 1.2rem',
+                          borderRadius: '6px',
+                          background: '#f5f5f5',
+                          color: '#222',
+                          fontWeight: 500,
+                          fontSize: '0.98rem',
+                          boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
+                          border: '1px solid #e0e0e0',
+                        }}
+                      >
+                        <a
+                          href={project.file.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project-file-link"
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            color: '#222',
+                            textDecoration: 'none',
+                            fontWeight: 500,
+                          }}
+                        >
+                          <span className="project-file-icon" style={{ marginRight: '0.5rem', fontSize: '1.1em' }}>📄</span>
+                          {project.file.name}
+                        </a>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Certifications Section */}
       <section className="certifications-section" id="certifications">
