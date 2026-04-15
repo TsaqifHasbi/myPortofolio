@@ -879,26 +879,24 @@ function App() {
                   <div className="experience-location">{exp.location}</div>
                   <p className="experience-description">{exp.description}</p>
                   
-                  {expandedExp[idx] && (
-                    <div className="experience-expanded-content">
-                      <div className="experience-achievements">
-                        <h6>{lang === 'id' ? 'Pencapaian Utama:' : 'Key Achievements:'}</h6>
-                        <ul>
-                          {exp.achievements.map((achievement, achIdx) => (
-                            <li key={achIdx}>{achievement}</li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="experience-technologies">
-                        <h6>{lang === 'id' ? 'Keterampilan & Kompetensi:' : 'Skills & Competencies:'}</h6>
-                        <div className="tech-tags">
-                          {exp.technologies.map((tech, techIdx) => (
-                            <span key={techIdx} className="tech-tag">{tech}</span>
-                          ))}
-                        </div>
+                  <div className={`experience-expanded-content ${expandedExp[idx] ? 'expanded' : 'collapsed'}`}>
+                    <div className="experience-achievements">
+                      <h6>{lang === 'id' ? 'Pencapaian Utama:' : 'Key Achievements:'}</h6>
+                      <ul>
+                        {exp.achievements.map((achievement, achIdx) => (
+                          <li key={achIdx}>{achievement}</li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="experience-technologies">
+                      <h6>{lang === 'id' ? 'Keterampilan & Kompetensi:' : 'Skills & Competencies:'}</h6>
+                      <div className="tech-tags">
+                        {exp.technologies.map((tech, techIdx) => (
+                          <span key={techIdx} className="tech-tag">{tech}</span>
+                        ))}
                       </div>
                     </div>
-                  )}
+                  </div>
                   
                   <button className="read-more-btn" onClick={() => toggleExpand(idx)}>
                     {expandedExp[idx] 

@@ -2091,7 +2091,7 @@ body {
   border: 1px solid var(--border-color);
   width: 45%;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, all 0.4s ease-in-out;
 }
 
 .experience-content:hover {
@@ -2172,6 +2172,21 @@ body {
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: -webkit-line-clamp 0.4s ease-in-out, line-clamp 0.4s ease-in-out, max-height 0.4s ease-in-out;
+  max-height: 8rem;
+}
+
+.experience-content.expanded .experience-description {
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  overflow: visible;
+  max-height: none;
 }
 
 .experience-achievements h6 {
@@ -2266,8 +2281,21 @@ body {
 
 /* Experience Expanded Content Animation */
 .experience-expanded-content {
-  animation: slideDown 0.4s ease-out;
   overflow: hidden;
+}
+
+/* When expanded state */
+.experience-expanded-content.expanded {
+  animation: slideDown 0.4s ease-out forwards;
+  max-height: 1000px;
+  opacity: 1;
+  margin-bottom: 1rem;
+  visibility: visible;
+}
+
+/* When collapsed state */
+.experience-expanded-content.collapsed {
+  animation: slideUp 0.4s ease-in forwards;
 }
 
 @keyframes slideDown {
@@ -2275,11 +2303,30 @@ body {
     opacity: 0;
     max-height: 0;
     transform: translateY(-10px);
+    visibility: hidden;
   }
   to {
     opacity: 1;
     max-height: 1000px;
     transform: translateY(0);
+    visibility: visible;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0);
+    visibility: visible;
+    margin-bottom: 1rem;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+    margin-bottom: 0;
   }
 }
 
@@ -2349,6 +2396,7 @@ body {
   margin-bottom: 0.5rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
