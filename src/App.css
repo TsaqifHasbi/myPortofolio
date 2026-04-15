@@ -1879,18 +1879,50 @@ body {
   .education-card {
     flex-direction: column;
     text-align: left;
-    gap: 1.5rem;
+    gap: 1rem;
+    padding: 1.5rem;
   }
 
   .education-icon {
-    align-self: center;
+    align-self: flex-start;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
   }
 
   .education-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.25rem;
     text-align: left;
+  }
+
+  .education-degree {
+    font-size: 1.1rem;
+  }
+
+  .education-institution {
+    font-size: 0.95rem;
+  }
+
+  .education-description {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .education-gpa {
+    font-size: 0.8rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .education-achievements h6 {
+    font-size: 0.8rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .education-achievements li {
+    font-size: 0.75rem;
+    padding-left: 0.75rem;
   }
 
   .contact-links {
@@ -2139,7 +2171,7 @@ body {
 .experience-description {
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .experience-achievements h6 {
@@ -2194,54 +2226,314 @@ body {
   border: 1px solid var(--border-color);
 }
 
+/* Read More Button */
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 0.5rem 1.25rem;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.read-more-btn:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.read-more-btn svg {
+  font-size: 0.7rem;
+  transition: transform 0.3s ease;
+}
+
+/* Desktop/Mobile Visibility */
+.desktop-only {
+  display: block !important;
+}
+
+.mobile-only {
+  display: none !important;
+}
+
+/* Experience Expanded Content Animation */
+.experience-expanded-content {
+  animation: slideDown 0.4s ease-out;
+  overflow: hidden;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 1000px;
+    transform: translateY(0);
+  }
+}
+
+/* ====== Mobile Experience Grid ====== */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 0 0.5rem;
+}
+
+.experience-card-mobile {
+  background: var(--card-bg);
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.experience-card-mobile:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+}
+
+.exp-card-accent {
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-hover));
+}
+
+.exp-card-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.exp-card-body .experience-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+  line-height: 1.3;
+}
+
+.exp-card-body .experience-position {
+  font-size: 0.72rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin: 0 0 0.4rem 0;
+  line-height: 1.3;
+}
+
+.experience-year-mobile {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.experience-description-mobile {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.exp-card-body .read-more-btn {
+  margin-top: auto;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.7rem;
+  align-self: flex-start;
+}
+
+/* ====== Experience Modal ====== */
+.exp-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.exp-modal-content {
+  background: var(--card-bg);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalSlideUp 0.35s ease-out;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Scrollbar styling for modal */
+.exp-modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.exp-modal-content::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+  border-radius: 10px;
+}
+
+.exp-modal-content::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 10px;
+}
+
+.exp-modal-content::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.exp-modal-close {
+  position: sticky;
+  top: 1rem;
+  float: right;
+  margin: 1rem 1rem 0 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.exp-modal-close:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: rotate(90deg);
+}
+
+.exp-modal-header {
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.exp-modal-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem 0;
+}
+
+.exp-modal-position {
+  font-size: 1rem;
+  color: var(--accent-color);
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+}
+
+.exp-modal-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.exp-modal-year {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.2rem 0.7rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  width: fit-content;
+}
+
+.exp-modal-location {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.exp-modal-body {
+  padding: 1.5rem;
+}
+
+.exp-modal-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.exp-modal-body .experience-achievements h6 {
+  font-size: 0.85rem;
+}
+
+.exp-modal-body .experience-achievements li {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-modal-body .tech-tag {
+  font-size: 0.7rem;
+  padding: 0.35rem 0.75rem;
+}
+
 /* Experience Responsive */
 @media (max-width: 768px) {
-  .experience-timeline::before {
-    display: none;
+  .desktop-only {
+    display: none !important;
   }
 
-  .experience-line {
-    display: none;
+  .mobile-only {
+    display: grid !important;
   }
 
-  .experience-dot {
-    display: none;
+  .experience-section {
+    padding: 4rem 0;
   }
 
-  .experience-item {
-    flex-direction: column !important;
-    padding-left: 0;
-    margin: 2rem 0;
+  .experience-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .experience-item:nth-child(odd),
-  .experience-item:nth-child(even) {
-    flex-direction: column;
-  }
-
-  .experience-content {
-    width: 100%;
-    margin: 0 !important;
-    padding: 2rem;
-  }
-
-  .experience-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .experience-year {
-    align-self: flex-start;
-  }
-
-  .experience-achievements li {
-    margin-bottom: 0.5rem;
-  }
-
-  .experience-item:nth-child(odd) .experience-content::after,
-  .experience-item:nth-child(even) .experience-content::after {
-    display: none;
+@media (max-width: 380px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -2448,6 +2740,105 @@ body {
 
   .certifications-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .education-icon {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    font-size: 1.5rem;
+  }
+
+  .education-card {
+    gap: 0.75rem;
+    padding: 1.25rem;
+    position: relative;
+  }
+
+  .education-content {
+    padding-right: 0.5rem;
+  }
+
+  .education-header {
+    flex-wrap: nowrap;
+  }
+
+  .education-year {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    margin: 0;
+  }
+
+  .education-achievements ul {
+    gap: 0.3rem;
+  }
+
+  .education-achievements li {
+    font-size: 0.7rem;
+    padding-left: 0.6rem;
+  }
+}
+
+/* Additional Mobile Education Styling */
+@media (max-width: 480px) {
+  .education-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    font-size: 1.3rem;
+  }
+
+  .education-card {
+    gap: 0.5rem;
+    padding: 1rem;
+    position: relative;
+  }
+
+  .education-content {
+    padding-right: 0.3rem;
+  }
+
+  .education-degree {
+    font-size: 0.9rem;
+    flex: 0 1 auto;
+  }
+
+  .education-institution {
+    font-size: 0.85rem;
+  }
+
+  .education-description {
+    font-size: 0.75rem;
+  }
+
+  .education-gpa {
+    font-size: 0.7rem;
+  }
+
+  .education-year {
+    position: absolute;
+    top: 1.4rem;
+    right: 1rem;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    margin: 0;
+  }
+
+  .education-achievements h6 {
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .education-achievements ul {
+    gap: 0.2rem;
+  }
+
+  .education-achievements li {
+    font-size: 0.65rem;
+    padding-left: 0.5rem;
   }
 }
 

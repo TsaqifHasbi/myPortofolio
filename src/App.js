@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import './App.css';
 import {
   FaPalette,
@@ -22,7 +22,10 @@ import {
   FaCertificate,
   FaServer,
   // FaReact,
-  FaJsSquare
+  FaJsSquare,
+  FaTimes,
+  FaChevronDown,
+  FaChevronUp
 } from 'react-icons/fa';
 
 const content = {
@@ -654,8 +657,35 @@ function App() {
   const [lang, setLang] = useState('id');
   const [darkMode, setDarkMode] = useState(true); // Default dark mode
   const [skillsVisible, setSkillsVisible] = useState(false);
+  const [expandedExp, setExpandedExp] = useState({});
+  const [mobileExpModal, setMobileExpModal] = useState(null);
   const skillsRef = useRef(null);
   const t = content[lang];
+
+  // Detect mobile
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Toggle expand on desktop
+  const toggleExpand = useCallback((idx) => {
+    setExpandedExp(prev => ({ ...prev, [idx]: !prev[idx] }));
+  }, []);
+
+  // Open modal on mobile
+  const openExpModal = useCallback((exp) => {
+    setMobileExpModal(exp);
+    document.body.style.overflow = 'hidden';
+  }, []);
+
+  // Close modal
+  const closeExpModal = useCallback(() => {
+    setMobileExpModal(null);
+    document.body.style.overflow = '';
+  }, []);
 
   // Intersection Observer for skills animation
   useEffect(() => {
@@ -832,13 +862,15 @@ function App() {
       <section className="experience-section" id="experience">
         <div className="container">
           <h3 className="section-title">{t.experienceTitle}</h3>
-          <div className="experience-timeline">
+          
+          {/* Desktop: Timeline Layout */}
+          <div className="experience-timeline desktop-only">
             {t.experience.map((exp, idx) => (
               <div className="experience-item" key={idx}>
                 <div className="experience-line">
                   <div className="experience-dot"></div>
                 </div>
-                <div className="experience-content">
+                <div className={`experience-content ${expandedExp[idx] ? 'expanded' : ''}`}>
                   <div className="experience-header">
                     <h4 className="experience-title">{exp.title}</h4>
                     <div className="experience-year">{exp.year}</div>
@@ -846,28 +878,97 @@ function App() {
                   <h5 className="experience-position">{exp.position}</h5>
                   <div className="experience-location">{exp.location}</div>
                   <p className="experience-description">{exp.description}</p>
-                  <div className="experience-achievements">
-                    <h6>{lang === 'id' ? 'Pencapaian Utama:' : 'Key Achievements:'}</h6>
-                    <ul>
-                      {exp.achievements.map((achievement, achIdx) => (
-                        <li key={achIdx}>{achievement}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="experience-technologies">
-                    <h6>{lang === 'id' ? 'Keterampilan & Kompetensi:' : 'Skills & Competencies:'}</h6>
-                    <div className="tech-tags">
-                      {exp.technologies.map((tech, techIdx) => (
-                        <span key={techIdx} className="tech-tag">{tech}</span>
-                      ))}
+                  
+                  {expandedExp[idx] && (
+                    <div className="experience-expanded-content">
+                      <div className="experience-achievements">
+                        <h6>{lang === 'id' ? 'Pencapaian Utama:' : 'Key Achievements:'}</h6>
+                        <ul>
+                          {exp.achievements.map((achievement, achIdx) => (
+                            <li key={achIdx}>{achievement}</li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="experience-technologies">
+                        <h6>{lang === 'id' ? 'Keterampilan & Kompetensi:' : 'Skills & Competencies:'}</h6>
+                        <div className="tech-tags">
+                          {exp.technologies.map((tech, techIdx) => (
+                            <span key={techIdx} className="tech-tag">{tech}</span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  )}
+                  
+                  <button className="read-more-btn" onClick={() => toggleExpand(idx)}>
+                    {expandedExp[idx] 
+                      ? (lang === 'id' ? 'Tutup' : 'Show Less') 
+                      : (lang === 'id' ? 'Selengkapnya' : 'Read More')}
+                    {expandedExp[idx] ? <FaChevronUp /> : <FaChevronDown />}
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Mobile: 2-Column Grid Layout */}
+          <div className="experience-grid mobile-only">
+            {t.experience.map((exp, idx) => (
+              <div className="experience-card-mobile" key={idx}>
+                <div className="exp-card-accent"></div>
+                <div className="exp-card-body">
+                  <h4 className="experience-title">{exp.title}</h4>
+                  <h5 className="experience-position">{exp.position}</h5>
+                  <div className="experience-year-mobile">{exp.year}</div>
+                  <p className="experience-description-mobile">{exp.description}</p>
+                  <button className="read-more-btn" onClick={() => openExpModal(exp)}>
+                    {lang === 'id' ? 'Selengkapnya' : 'Read More'}
+                    <FaChevronDown />
+                  </button>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Experience Mobile Modal */}
+      {mobileExpModal && (
+        <div className="exp-modal-overlay" onClick={closeExpModal}>
+          <div className="exp-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="exp-modal-close" onClick={closeExpModal}>
+              <FaTimes />
+            </button>
+            <div className="exp-modal-header">
+              <h4 className="exp-modal-title">{mobileExpModal.title}</h4>
+              <h5 className="exp-modal-position">{mobileExpModal.position}</h5>
+              <div className="exp-modal-meta">
+                <span className="exp-modal-year">{mobileExpModal.year}</span>
+                <span className="exp-modal-location">{mobileExpModal.location}</span>
+              </div>
+            </div>
+            <div className="exp-modal-body">
+              <p className="exp-modal-description">{mobileExpModal.description}</p>
+              <div className="experience-achievements">
+                <h6>{lang === 'id' ? 'Pencapaian Utama:' : 'Key Achievements:'}</h6>
+                <ul>
+                  {mobileExpModal.achievements.map((achievement, achIdx) => (
+                    <li key={achIdx}>{achievement}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="experience-technologies">
+                <h6>{lang === 'id' ? 'Keterampilan & Kompetensi:' : 'Skills & Competencies:'}</h6>
+                <div className="tech-tags">
+                  {mobileExpModal.technologies.map((tech, techIdx) => (
+                    <span key={techIdx} className="tech-tag">{tech}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Skills Section */}
       <section className="skills-section" id="skills" ref={skillsRef}>
