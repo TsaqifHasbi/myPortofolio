@@ -428,7 +428,7 @@ const content = {
         position: 'Divisi Marketing (Internship)',
         year: 'Mar 2025 - Jun 2025',
         location: 'Alam Sutera, Tangerang, Banten, Indonesia',
-        description: 'Sebagai Asisten Laboratorium Struktur Data, saya membantu dosen pengampu dalam pelaksanaan praktikum dan membimbing mahasiswa dalam memahami konsep dasar dan implementasi struktur data menggunakan bahasa pemrograman.',
+        description: 'Selama melaksanakan kerja praktik di PT Alfindo LF Makmur, saya terlibat dalam pengembangan website pemasaran digital untuk produk Sunny Farm Egg menggunakan Laravel dan Tailwind CSS dengan metode Agile (Scrum), mulai dari analisis kebutuhan, perancangan UI, implementasi fitur, hingga pengujian sistem. Website ini berfungsi sebagai media pemasaran baru untuk menggantikan Linktree, dengan fitur katalog produk, informasi perusahaan, detail harga dan keunggulan produk, serta formulir kontak yang terintegrasi dengan email.',
         achievements: [
           'Berhasil membantu mahasiswa memahami konsep dasar struktur data dan implementasinya dengan baik',
           'Membantu mahasiswa dalam memecahkan masalah praktikum dan memberikan bimbingan pemrograman',
