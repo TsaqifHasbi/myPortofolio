@@ -718,9 +718,9 @@ function App() {
             <button className="dark-mode-toggle" onClick={() => setDarkMode(!darkMode)}>
               {darkMode ? <FaSun /> : <FaMoon />}
             </button>
-            {/* <button className="lang-switcher" onClick={() => setLang(lang === 'id' ? 'en' : 'id')}>
+            <button className="lang-switcher" onClick={() => setLang(lang === 'id' ? 'en' : 'id')}>
               {lang === 'id' ? 'EN' : 'ID'}
-            </button> */}
+            </button>
           </div>
         </div>
       </nav>
