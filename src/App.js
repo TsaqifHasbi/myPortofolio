@@ -419,6 +419,22 @@ const content = {
           'Mengevaluasi hasil praktikum mahasiswa secara objektif dan memberikan penilaian yang akurat',
           'Memberikan solusi dan penjelasan tambahan untuk memperkuat pemahaman mahasiswa',
           'Menjaga ketertiban dan kelancaran saat berlangsungnya sesi praktikum',
+          'Menyelesaikan periode pengajaran intensif 5 bulan dengan feedback positif dari mahasiswa'
+        ],
+        technologies: ['C Programming Language', 'Communication', 'Teaching']
+      },
+      {
+        title: 'PT Alfindo LF Makmur',
+        position: 'Divisi Marketing (Internship)',
+        year: 'Mar 2025 - Jun 2025',
+        location: 'Alam Sutera, Tangerang, Banten, Indonesia',
+        description: 'Sebagai Asisten Laboratorium Struktur Data, saya membantu dosen pengampu dalam pelaksanaan praktikum dan membimbing mahasiswa dalam memahami konsep dasar dan implementasi struktur data menggunakan bahasa pemrograman.',
+        achievements: [
+          'Berhasil membantu mahasiswa memahami konsep dasar struktur data dan implementasinya dengan baik',
+          'Membantu mahasiswa dalam memecahkan masalah praktikum dan memberikan bimbingan pemrograman',
+          'Mengevaluasi hasil praktikum mahasiswa secara objektif dan memberikan penilaian yang akurat',
+          'Memberikan solusi dan penjelasan tambahan untuk memperkuat pemahaman mahasiswa',
+          'Menjaga ketertiban dan kelancaran saat berlangsungnya sesi praktikum',
           'Menyelesaikan periode pengajaran intensif 3 bulan dengan feedback positif dari mahasiswa'
         ],
         technologies: ['C Programming Language', 'Communication', 'Teaching']
@@ -702,9 +718,9 @@ function App() {
             <button className="dark-mode-toggle" onClick={() => setDarkMode(!darkMode)}>
               {darkMode ? <FaSun /> : <FaMoon />}
             </button>
-            <button className="lang-switcher" onClick={() => setLang(lang === 'id' ? 'en' : 'id')}>
+            {/* <button className="lang-switcher" onClick={() => setLang(lang === 'id' ? 'en' : 'id')}>
               {lang === 'id' ? 'EN' : 'ID'}
-            </button>
+            </button> */}
           </div>
         </div>
       </nav>
