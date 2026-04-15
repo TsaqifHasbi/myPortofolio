@@ -654,7 +654,7 @@ const content = {
 };
 
 function App() {
-  const [lang, setLang] = useState('id');
+  const [lang] = useState('id');
   const [darkMode, setDarkMode] = useState(true); // Default dark mode
   const [skillsVisible, setSkillsVisible] = useState(false);
   const [expandedExp, setExpandedExp] = useState({});
@@ -663,7 +663,7 @@ function App() {
   const t = content[lang];
 
   // Detect mobile
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [, setIsMobile] = useState(window.innerWidth <= 768);
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
     window.addEventListener('resize', handleResize);
