@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
-import { 
-  FaPalette, 
-  FaCode, 
-  FaRocket, 
+import {
+  FaPalette,
+  FaCode,
+  FaRocket,
   FaLightbulb,
   FaEnvelope,
   FaLinkedin,
@@ -21,7 +21,8 @@ import {
   FaBrain,
   FaCertificate,
   FaServer,
-  FaReact
+  // FaReact,
+  FaJsSquare
 } from 'react-icons/fa';
 
 const content = {
@@ -29,9 +30,9 @@ const content = {
     name: 'Tsaqif Hasbi Aghna Syarief',
     title: 'Portfolio',
     subtitle: 'Informatics Student & Tech Enthusiast',
-    description: 'Passionate Informatics student at Jenderal Soedirman University with expertise in software development, data structures, and digital marketing. Currently serving as Head of Human Resource Development Division at HMIF UNSOED.',
+    description: 'An Informatics student at Universitas Jenderal Soedirman with a strong interest in software development, particularly Full-Stack & Mobile Development, with a focus on building functional, responsive, and user-friendly web and mobile applications. Has an interest in data structures and digital marketing, and is actively working as a junior web developer and blogger, continuously improving skills through various projects and exploration of both frontend and backend technologies.',
     aboutTitle: 'About Me',
-    aboutDesc: 'I am an ambitious Informatics student with a strong foundation in programming, algorithm design, and digital marketing. My leadership experience includes managing human resource development programs and coordinating major university events. I combine technical skills with strategic thinking to create innovative solutions.',
+    // aboutDesc: 'I am an ambitious Informatics student with a strong foundation in programming, algorithm design, and digital marketing. My leadership experience includes managing human resource development programs and coordinating major university events. I combine technical skills with strategic thinking to create innovative solutions.',
     whoAmI: "I'm a passionate frontend developer specializing in responsive and interactive user interfaces. With a background in Informatics from Jenderal Soedirman University, I combine technical expertise with creative design thinking. I have extensive experience with modern frameworks like React and Vue.js, and I'm proficient in HTML, CSS, and JavaScript.",
     myApproach: 'My development philosophy centers on user-centered design principles where every decision prioritizes the end user experience. I follow a systematic approach with thorough planning and iterative development cycles. I emphasize clean, maintainable code while staying updated with industry best practices. Performance optimization and accessibility are crucial aspects of my workflow.',
     educationTitle: 'Education',
@@ -42,7 +43,7 @@ const content = {
         position: 'Search Engine Optimization Team Lead',
         year: 'Feb 2022 - Jul 2022',
         location: 'Jakarta Barat, Jakarta Raya, Indonesia',
-        description: 'An SEO Team Lead is someone who leads a team in developing and implementing search engine optimization strategies to improve online visibility and organic traffic.',
+        description: 'An SEO Team Lead is someone who leads a team in developing and implementing search engine optimization strategies to improve online visibility.',
         achievements: [
           'Strategy Development: Designing effective SEO strategies',
           'Analysis and Reporting: Analyzing site performance and reporting results',
@@ -73,7 +74,7 @@ const content = {
       },
       {
         title: 'BEM FT UNSOED',
-        position: 'Faculty of Engineering Coordinator for the PORSOED Event',
+        position: 'Faculty of Engineering Coordinator (PORSOED)',
         year: 'Sep 2024 - Nov 2024',
         location: 'Purwokerto, Jawa Tengah, Indonesia',
         description: 'As Faculty Coordinator in PORSOED (Pekan Olahraga Soedirman) representing BEM FT UNSOED, I was responsible for full coordination and contingent management of Faculty of Engineering Jenderal Soedirman University in following inter-faculty sports competition.',
@@ -89,7 +90,7 @@ const content = {
       {
         title: 'HMIF UNSOED',
         position: 'Head of Human Resource Development Division',
-        year: 'Mar 2025 - Present',
+        year: 'Mar 2025 - Mar 2026',
         location: 'Purbalingga, Jawa Tengah, Indonesia',
         description: 'As Head of Human Resource Development Division in HMIF UNSOED (Himpunan Mahasiswa Informatika), I lead the division responsible for developing human resources, organizing training programs, and enhancing the skills and capabilities of Informatics students.',
         achievements: [
@@ -150,8 +151,8 @@ const content = {
     ],
     skillsTitle: 'My Skills',
     skills: [
-      { 
-        title: 'UI/UX Design', 
+      {
+        title: 'UI/UX Design',
         desc: 'Creating intuitive and beautiful user interfaces using Figma, Canva, and modern design principles.',
         techs: [
           { name: 'Figma', level: 90 },
@@ -160,8 +161,8 @@ const content = {
           { name: 'Adobe Illustrator', level: 82 }
         ]
       },
-      { 
-        title: 'Web Development', 
+      {
+        title: 'Web Development',
         desc: 'Building responsive and interactive websites using fundamental web technologies and core programming languages.',
         techs: [
           { name: 'HTML', level: 95 },
@@ -170,8 +171,8 @@ const content = {
           { name: 'Web APIs', level: 80 }
         ]
       },
-      { 
-        title: 'JavaScript Frameworks', 
+      {
+        title: 'JavaScript Frameworks',
         desc: 'Building dynamic and interactive web applications using modern JavaScript frameworks and libraries for component-based development.',
         techs: [
           { name: 'ReactJS', level: 85 },
@@ -180,8 +181,8 @@ const content = {
           { name: 'State Management', level: 78 }
         ]
       },
-      { 
-        title: 'Frontend Frameworks', 
+      {
+        title: 'Frontend Frameworks',
         desc: 'Building modern and responsive user interfaces using popular CSS frameworks and utility-first libraries for rapid development.',
         techs: [
           { name: 'Bootstrap', level: 88 },
@@ -190,8 +191,8 @@ const content = {
           { name: 'Material-UI', level: 10 }
         ]
       },
-      { 
-        title: 'Backend Frameworks', 
+      {
+        title: 'Backend Frameworks',
         desc: 'Developing robust web applications using modern backend frameworks for efficient server-side development.',
         techs: [
           { name: 'CodeIgniter', level: 82 },
@@ -199,8 +200,8 @@ const content = {
           { name: 'AdonisJS', level: 75 }
         ]
       },
-      { 
-        title: 'Programming Logic', 
+      {
+        title: 'Programming Logic',
         desc: 'Developing efficient algorithms and solutions using various programming languages.',
         techs: [
           { name: 'C', level: 95 },
@@ -209,8 +210,8 @@ const content = {
           { name: 'Java (OOP)', level: 82 }
         ]
       },
-      { 
-        title: 'Database & SQL', 
+      {
+        title: 'Database & SQL',
         desc: 'Designing and managing databases with efficient query optimization and data modeling.',
         techs: [
           { name: 'MySQL', level: 88 },
@@ -219,8 +220,8 @@ const content = {
           { name: 'Data Modeling', level: 78 }
         ]
       },
-      { 
-        title: 'Version Control', 
+      {
+        title: 'Version Control',
         desc: 'Managing code versions and collaboration using Git and GitHub for efficient project development.',
         techs: [
           { name: 'Git', level: 92 },
@@ -229,8 +230,8 @@ const content = {
           { name: 'Branch Management', level: 82 }
         ]
       },
-      { 
-        title: 'Digital Marketing', 
+      {
+        title: 'Digital Marketing',
         desc: 'Developing comprehensive digital marketing strategies including social media management, SEO optimization, and Google advertising campaigns.',
         techs: [
           { name: 'Social Media', level: 90 },
@@ -239,8 +240,8 @@ const content = {
           { name: 'Content Strategy', level: 83 }
         ]
       },
-      { 
-        title: 'SEO', 
+      {
+        title: 'SEO',
         desc: 'Optimizing websites for search engines to improve visibility, ranking, and organic traffic through keyword research and technical optimization.',
         techs: [
           { name: 'Keyword Research', level: 95 },
@@ -249,8 +250,8 @@ const content = {
           { name: 'Analytics', level: 85 }
         ]
       },
-      { 
-        title: 'Microsoft Office', 
+      {
+        title: 'Microsoft Office',
         desc: 'Proficient in Microsoft Office suite for productivity, data analysis, and professional documentation with advanced features and automation.',
         techs: [
           { name: 'Excel', level: 92 },
@@ -333,11 +334,11 @@ const content = {
     name: 'Tsaqif Hasbi Aghna Syarief',
     title: 'Portofolio',
     subtitle: 'Mahasiswa Informatika & Tech Enthusiast',
-    description: 'Mahasiswa Informatika Universitas Jenderal Soedirman yang passionate dalam pengembangan perangkat lunak, struktur data, dan digital marketing. Saat ini menjabat sebagai Ketua Divisi Pengembangan Sumber Daya Mahasiswa di HMIF UNSOED.',
+    description: 'Mahasiswa Informatika Universitas Jenderal Soedirman yang memiliki ketertarikan kuat pada pengembangan perangkat lunak, khususnya Full-Stack & Mobile Development, dengan fokus pada pembangunan aplikasi web dan mobile yang fungsional, responsif, dan mudah digunakan. Memiliki ketertarikan pada struktur data dan digital marketing, serta aktif sebagai junior web developer dan blogger yang terus mengasah kemampuan melalui berbagai proyek dan eksplorasi teknologi frontend maupun backend.',
     aboutTitle: 'Tentang Saya',
-    aboutDesc: 'Saya adalah mahasiswa Informatika yang ambisius dengan fondasi kuat dalam pemrograman, desain algoritma, dan digital marketing. Pengalaman kepemimpinan saya meliputi pengelolaan program pengembangan SDM dan koordinasi acara besar universitas. Saya menggabungkan kemampuan teknis dengan pemikiran strategis untuk menciptakan solusi inovatif.',
-    whoAmI: 'Saya adalah frontend developer yang bersemangat dan mengkhususkan diri dalam antarmuka pengguna yang responsif dan interaktif. Dengan latar belakang Informatika dari Universitas Jenderal Soedirman, saya memadukan keahlian teknis dengan pemikiran desain kreatif. Saya memiliki pengalaman luas dengan framework modern seperti React dan Vue.js, serta mahir dalam HTML, CSS, dan JavaScript.',
-    myApproach: 'Filosofi pengembangan saya berpusat pada prinsip desain yang mengutamakan pengguna di mana setiap keputusan memprioritaskan pengalaman pengguna akhir. Saya mengikuti pendekatan sistematis dengan perencanaan menyeluruh dan siklus pengembangan iteratif. Saya menekankan kode yang bersih dan mudah dipelihara sambil terus mengikuti praktik terbaik industri. Optimisasi performa dan aksesibilitas adalah aspek penting dalam alur kerja saya.',
+    // aboutDesc: 'Mahasiswa Informatika Universitas Jenderal Soedirman yang memiliki ketertarikan kuat pada pengembangan perangkat lunak, khususnya Full-Stack & Mobile Development, dengan fokus pada pembangunan aplikasi web dan mobile yang fungsional, responsif, dan mudah digunakan. Memiliki ketertarikan pada struktur data dan digital marketing, serta aktif sebagai junior web developer dan blogger yang terus mengasah kemampuan melalui berbagai proyek dan eksplorasi teknologi frontend maupun backend.',
+    whoAmI: 'Saya adalah seorang Full-Stack & Mobile Developer yang sedang menempuh studi Informatika di Universitas Jenderal Soedirman. Saya memiliki ketertarikan yang kuat dalam pengembangan aplikasi web dan mobile, dengan fokus pada pembuatan sistem yang fungsional, responsif, dan mudah digunakan.',
+    myApproach: 'Selain sebagai mahasiswa, saya juga aktif sebagai blogger dan junior web developer yang terus mengasah kemampuan melalui berbagai proyek dan eksplorasi teknologi. Saya terbiasa bekerja dengan berbagai teknologi modern di sisi frontend maupun backend, serta memiliki minat untuk terus berkembang dalam pengembangan aplikasi end-to-end.',
     educationTitle: 'Pendidikan',
     experienceTitle: 'Pengalaman',
     experience: [
@@ -345,8 +346,8 @@ const content = {
         title: 'SARI Teknologi',
         position: 'Search Engine Optimization Team Lead',
         year: 'Feb 2022 - Jul 2022',
-        location: 'Jakarta Barat, Jakarta Raya, Indonesia',
-        description: 'Seorang SEO Team Lead adalah seseorang yang memimpin tim dalam mengembangkan dan melaksanakan strategi optimasi mesin pencari untuk meningkatkan visibilitas online dan lalu lintas organik.',
+        location: 'Jakarta Barat, DKI Jakarta, Indonesia',
+        description: 'Seorang SEO Team Lead adalah seseorang yang memimpin tim dalam mengembangkan dan melaksanakan strategi optimasi mesin pencari untuk meningkatkan visibilitas online.',
         achievements: [
           'Pengembangan Strategi: Merancang strategi SEO yang efektif',
           'Analisis dan Pelaporan: Menganalisis performa situs dan melaporkan hasilnya',
@@ -377,7 +378,7 @@ const content = {
       },
       {
         title: 'BEM FT UNSOED',
-        position: 'Koordinator Fakultas untuk Acara PORSOED',
+        position: 'Koordinator Fakultas Teknik (PORSOED)',
         year: 'Sep 2024 - Nov 2024',
         location: 'Purwokerto, Jawa Tengah, Indonesia',
         description: 'Sebagai Koordinator Fakultas dalam PORSOED (Pekan Olahraga Soedirman) mewakili BEM FT UNSOED, saya bertanggung jawab penuh atas koordinasi dan manajemen kontingen Fakultas Teknik Universitas Jenderal Soedirman dalam mengikuti kompetisi olahraga antar fakultas.',
@@ -393,7 +394,7 @@ const content = {
       {
         title: 'HMIF UNSOED',
         position: 'Ketua Divisi Pengembangan Sumber Daya Manusia',
-        year: 'Mar 2025 - Sekarang',
+        year: 'Mar 2025 - Mar 2026',
         location: 'Purbalingga, Jawa Tengah, Indonesia',
         description: 'Sebagai Ketua Divisi Pengembangan Sumber Daya Manusia di HMIF UNSOED (Himpunan Mahasiswa Informatika), saya memimpin divisi yang bertanggung jawab mengembangkan sumber daya manusia, menyelenggarakan program pelatihan, dan meningkatkan kemampuan mahasiswa Informatika.',
         achievements: [
@@ -454,8 +455,8 @@ const content = {
     ],
     skillsTitle: 'Keahlian Saya',
     skills: [
-      { 
-        title: 'Desain UI/UX', 
+      {
+        title: 'Desain UI/UX',
         desc: 'Menciptakan antarmuka pengguna yang intuitif dan indah menggunakan Figma, Canva, dan prinsip desain modern.',
         techs: [
           { name: 'Figma', level: 90 },
@@ -464,8 +465,8 @@ const content = {
           { name: 'Adobe Illustrator', level: 82 }
         ]
       },
-      { 
-        title: 'Pengembangan Web', 
+      {
+        title: 'Pengembangan Web',
         desc: 'Membangun website responsif dan interaktif menggunakan teknologi web fundamental dan bahasa pemrograman inti.',
         techs: [
           { name: 'HTML', level: 95 },
@@ -474,8 +475,8 @@ const content = {
           { name: 'Web APIs', level: 80 }
         ]
       },
-      { 
-        title: 'JavaScript Frameworks', 
+      {
+        title: 'JavaScript Frameworks',
         desc: 'Membangun aplikasi web yang dinamis dan interaktif menggunakan framework JavaScript modern dan library untuk pengembangan berbasis komponen.',
         techs: [
           { name: 'ReactJS', level: 85 },
@@ -484,8 +485,8 @@ const content = {
           { name: 'State Management', level: 78 }
         ]
       },
-      { 
-        title: 'Framework Frontend', 
+      {
+        title: 'Framework Frontend',
         desc: 'Membangun antarmuka pengguna yang modern dan responsif menggunakan framework CSS populer dan utility-first libraries untuk pengembangan yang cepat.',
         techs: [
           { name: 'Bootstrap', level: 88 },
@@ -494,8 +495,8 @@ const content = {
           { name: 'Material-UI', level: 10 }
         ]
       },
-      { 
-        title: 'Framework Backend', 
+      {
+        title: 'Framework Backend',
         desc: 'Mengembangkan aplikasi web yang robust menggunakan framework backend modern untuk pengembangan sisi server yang efisien.',
         techs: [
           { name: 'CodeIgniter', level: 82 },
@@ -503,8 +504,8 @@ const content = {
           { name: 'AdonisJS', level: 75 }
         ]
       },
-      { 
-        title: 'Pemrograman Logika', 
+      {
+        title: 'Pemrograman Logika',
         desc: 'Mengembangkan algoritma dan solusi yang efisien menggunakan berbagai bahasa pemrograman.',
         techs: [
           { name: 'C', level: 95 },
@@ -513,8 +514,8 @@ const content = {
           { name: 'Java (OOP)', level: 82 }
         ]
       },
-      { 
-        title: 'Database & SQL', 
+      {
+        title: 'Database & SQL',
         desc: 'Merancang dan mengelola database dengan optimisasi query yang efisien dan pemodelan data.',
         techs: [
           { name: 'MySQL', level: 88 },
@@ -523,8 +524,8 @@ const content = {
           { name: 'Data Modeling', level: 78 }
         ]
       },
-      { 
-        title: 'Version Control', 
+      {
+        title: 'Version Control',
         desc: 'Mengelola versi kode dan kolaborasi menggunakan Git dan GitHub untuk pengembangan proyek yang efisien.',
         techs: [
           { name: 'Git', level: 92 },
@@ -533,8 +534,8 @@ const content = {
           { name: 'Branch Management', level: 82 }
         ]
       },
-      { 
-        title: 'Digital Marketing', 
+      {
+        title: 'Digital Marketing',
         desc: 'Mengembangkan strategi pemasaran digital yang komprehensif termasuk manajemen media sosial, optimisasi SEO, dan kampanye iklan Google.',
         techs: [
           { name: 'Social Media', level: 90 },
@@ -543,8 +544,8 @@ const content = {
           { name: 'Content Strategy', level: 83 }
         ]
       },
-      { 
-        title: 'SEO', 
+      {
+        title: 'SEO',
         desc: 'Mengoptimalkan website untuk mesin pencari guna meningkatkan visibilitas, ranking, dan traffic organik melalui riset kata kunci dan optimisasi teknis.',
         techs: [
           { name: 'Keyword Research', level: 95 },
@@ -553,8 +554,8 @@ const content = {
           { name: 'Analytics', level: 85 }
         ]
       },
-      { 
-        title: 'Microsoft Office', 
+      {
+        title: 'Microsoft Office',
         desc: 'Mahir menggunakan suite Microsoft Office untuk produktivitas, analisis data, dan dokumentasi profesional dengan fitur-fitur canggih dan otomasi.',
         techs: [
           { name: 'Excel', level: 92 },
@@ -747,16 +748,16 @@ function App() {
                 </div>
                 <div className="about-main-circle">
                   <div className="about-avatar">
-                    <img 
-                      src="/tsf.jpg" 
-                      alt="Tsaqif Hasbi Aghna Syarief" 
+                    <img
+                      src="/tsf.jpg"
+                      alt="Tsaqif Hasbi Aghna Syarief"
                       className="about-avatar-image"
                       onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.nextSibling.style.display = 'flex';
                       }}
                     />
-                    <div className="about-avatar-placeholder" style={{display: 'none'}}>
+                    <div className="about-avatar-placeholder" style={{ display: 'none' }}>
                       <FaUser />
                     </div>
                   </div>
@@ -768,7 +769,7 @@ function App() {
                 <div className="about-paragraph">
                   <p className="paragraph-text">{t.whoAmI}</p>
                 </div>
-                
+
                 <div className="about-paragraph">
                   <p className="paragraph-text">{t.myApproach}</p>
                 </div>
@@ -861,17 +862,17 @@ function App() {
               {t.skills.map((skill, idx) => (
                 <div className="skill-card" key={idx}>
                   <div className="skill-icon">
-                    {idx === 0 ? <FaPalette /> : 
-                     idx === 1 ? <FaCode /> : 
-                     idx === 2 ? <FaReact /> : 
-                     idx === 3 ? <FaRocket /> : 
-                     idx === 4 ? <FaServer /> : 
-                     idx === 5 ? <FaBrain /> : 
-                     idx === 6 ? <FaDatabase /> : 
-                     idx === 7 ? <FaGitAlt /> : 
-                     idx === 8 ? <FaBullhorn /> :
-                     idx === 9 ? <FaSearch /> :
-                     <FaMicrosoft />}
+                    {idx === 0 ? <FaPalette /> :
+                      idx === 1 ? <FaCode /> :
+                        idx === 2 ? <FaJsSquare /> :
+                          idx === 3 ? <FaRocket /> :
+                            idx === 4 ? <FaServer /> :
+                              idx === 5 ? <FaBrain /> :
+                                idx === 6 ? <FaDatabase /> :
+                                  idx === 7 ? <FaGitAlt /> :
+                                    idx === 8 ? <FaBullhorn /> :
+                                      idx === 9 ? <FaSearch /> :
+                                        <FaMicrosoft />}
                   </div>
                   <h4 className="skill-title">{skill.title}</h4>
                   <p className="skill-desc">{skill.desc}</p>
@@ -890,9 +891,9 @@ function App() {
                           overflow: 'hidden',
                           marginTop: '4px'
                         }}>
-                          <div 
+                          <div
                             className={`tech-progress-fill ${skillsVisible ? 'animate' : ''}`}
-                            style={{ 
+                            style={{
                               width: skillsVisible ? `${tech.level}%` : '0%',
                               height: '100%',
                               backgroundColor: '#007bff',
@@ -920,9 +921,9 @@ function App() {
             {t.projects.map((project, idx) => (
               <div className="project-card" key={idx}>
                 <div className="project-image">
-                  {idx === 0 ? <FaRocket /> : 
-                   idx === 1 ? <FaLightbulb /> : 
-                   <FaBullhorn />}
+                  {idx === 0 ? <FaRocket /> :
+                    idx === 1 ? <FaLightbulb /> :
+                      <FaBullhorn />}
                 </div>
                 <div className="project-content">
                   <h4>{project.title}</h4>
