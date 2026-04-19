@@ -415,7 +415,7 @@ const content = {
         position: 'Asisten Laboratorium Struktur Data Informatika 2025',
         year: 'Mar 2025 - Jun 2025',
         location: 'Purbalingga, Jawa Tengah, Indonesia',
-        description: 'Sebagai Asisten Laboratorium Struktur Data, saya membantu dosen pengampu dalam pelaksanaan praktikum dan membimbing mahasiswa dalam memahami konsep dasar dan implementasi struktur data menggunakan bahasa pemrograman.',
+        description: 'Sebagai Asisten Laboratorium Struktur Data, saya membantu dosen pengampu dalam pelaksanaan praktikum dan membimbing mahasiswa dalam memahami konsep dasar dan implementasi struktur data menggunakan bahasa pemrograman C/C++.',
         achievements: [
           'Berhasil membantu mahasiswa memahami konsep dasar struktur data dan implementasinya dengan baik',
           'Membantu mahasiswa dalam memecahkan masalah praktikum dan memberikan bimbingan pemrograman',
@@ -424,12 +424,12 @@ const content = {
           'Menjaga ketertiban dan kelancaran saat berlangsungnya sesi praktikum',
           'Menyelesaikan periode pengajaran intensif 5 bulan dengan feedback positif dari mahasiswa'
         ],
-        technologies: ['C Programming Language', 'Communication', 'Teaching']
+        technologies: ['C Programming Language', 'C++ Programming Language', 'Communication', 'Teaching']
       },
       {
         title: 'PT Alfindo LF Makmur',
         position: 'Divisi Marketing (Internship)',
-        year: 'Mar 2025 - Jun 2025',
+        year: 'Jul 2025 - Agu 2025',
         location: 'Alam Sutera, Tangerang, Banten, Indonesia',
         description: 'Selama melaksanakan kerja praktik di PT Alfindo LF Makmur, saya terlibat dalam pengembangan website pemasaran digital untuk produk Sunny Farm Egg menggunakan Laravel dan Tailwind CSS dengan metode Agile (Scrum), mulai dari analisis kebutuhan, perancangan UI, implementasi fitur, hingga pengujian sistem. Website ini berfungsi sebagai media pemasaran baru untuk menggantikan Linktree, dengan fitur katalog produk, informasi perusahaan, detail harga dan keunggulan produk, serta formulir kontak yang terintegrasi dengan email.',
         achievements: [
@@ -440,8 +440,41 @@ const content = {
           'Menghasilkan website yang responsif dan dapat diakses dengan baik di berbagai perangkat, meningkatkan pengalaman pengguna.',
           'Berhasil mengembangkan dan mengimplementasikan website pemasaran digital yang menggantikan media sebelumnya (Linktree), sehingga informasi produk menjadi lebih lengkap, terstruktur, dan interaktif.'
         ],
-        technologies: ['C Programming Language', 'Communication', 'Teaching']
-      }
+        technologies: ['Laravel', 'Tailwind CSS', 'Marketing', 'PHP', 'Project Management']
+      },
+      {
+        title: 'Universitas Jenderal Soedirman',
+        position: 'Asisten Laboratorium Pemrograman Berorientasi Objek Informatika 2025',
+        year: 'Sep 2025 - Des 2025',
+        location: 'Purbalingga, Jawa Tengah, Indonesia',
+        description: 'Sebagai Asisten Laboratorium Pemrograman Berorientasi Objek, saya membantu dosen pengampu dalam pelaksanaan praktikum dan membimbing mahasiswa dalam memahami konsep dasar dan implementasi pemrograman berorientasi objek menggunakan bahasa pemrograman Java.',
+        achievements: [
+          'Berhasil membantu lebih dari 30 siswa dalam menguasai konsep inti Pemrograman Berorientasi Objek termasuk enkapsulasi, pewarisan, polimorfisme, abstraksi, kelas, dan objek, sambil mendemonstrasikan implementasi yang tepat dari fitur Java seperti antarmuka dan kelas abstrak dalam latihan pengkodean praktis.',
+          'Membimbing mahasiswa dalam mengimplementasikan prinsip-prinsip OOP melalui sesi lab terstruktur dan proyek-proyek sederhana menggunakan Netbeans IDE dan IntelliJ IDEA.',
+          'Membantu mahasiswa dalam memecahkan masalah praktikum dan memberikan bimbingan pemrograman',
+          'Mengevaluasi hasil praktikum mahasiswa secara objektif dan memberikan penilaian yang akurat',
+          'Memberikan solusi dan penjelasan tambahan untuk memperkuat pemahaman mahasiswa',
+          // 'Menjaga ketertiban dan kelancaran saat berlangsungnya sesi praktikum',
+          'Menyelesaikan periode pengajaran intensif 5 bulan dengan feedback positif dari mahasiswa'
+        ],
+        technologies: ['Java', 'Object-Oriented Programming', 'Communication', 'Teaching']
+      },
+      {
+        title: 'Universitas Jenderal Soedirman',
+        position: 'Asisten Laboratorium Pemrograman Web Informatika 2025',
+        year: 'Mar 2026 - Present',
+        location: 'Purbalingga, Jawa Tengah, Indonesia',
+        description: 'Sebagai Asisten Laboratorium Pemrograman Web, saya membantu dosen pengampu dalam pelaksanaan praktikum dan membimbing mahasiswa dalam memahami konsep dasar dan implementasi pemrograman web menggunakan bahasa pemrograman PHP dan JavaScript.',
+        achievements: [
+          'Berhasil membantu lebih dari 30 siswa dalam menguasai konsep inti Pemrograman Web termasuk HTML, CSS, JavaScript, dan PHP, sambil mendemonstrasikan implementasi yang tepat dari fitur-fitur web dalam latihan pengkodean praktis.',
+          'Membantu mahasiswa dalam memecahkan masalah praktikum dan memberikan bimbingan pemrograman',
+          'Mengevaluasi hasil praktikum mahasiswa secara objektif dan memberikan penilaian yang akurat',
+          'Memberikan solusi dan penjelasan tambahan untuk memperkuat pemahaman mahasiswa',
+          // 'Menjaga ketertiban dan kelancaran saat berlangsungnya sesi praktikum',
+          // 'Menyelesaikan periode pengajaran intensif 5 bulan dengan feedback positif dari mahasiswa'
+        ],
+        technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Web Development', 'Communication']
+      },
     ],
     education: [
       {
@@ -449,7 +482,7 @@ const content = {
         degree: 'Sarjana Komputer - Informatika (S.Kom)',
         year: '2023 - Sekarang',
         description: 'Sedang menempuh pendidikan Sarjana Komputer jurusan Informatika dengan fokus pada pengembangan perangkat lunak, algoritma, dan sistem komputer.',
-        gpa: 'IPK 3.7/4.0',
+        gpa: 'IPK 3.74/4.0',
         achievements: [
           'Proyek Penting dan Penelitian',
           'Proyek Pengembangan Perangkat Lunak',
@@ -463,7 +496,7 @@ const content = {
         degree: 'SMK - Rekayasa Perangkat Lunak',
         year: '2020 - 2023',
         description: 'Lulus dari Sekolah Menengah Kejuruan dengan spesialisasi Rekayasa Perangkat Lunak, fokus pada pengembangan aplikasi dan pemrograman.',
-        gpa: 'Lulusan Terbaik',
+        gpa: '89.10 / 100',
         achievements: [
           'Prestasi Akademik dan Teknis',
           'Proyek Pengembangan Perangkat Lunak - Aplikasi Web Aspirasi Mahasiswa (localhost)',
