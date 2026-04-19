@@ -42,7 +42,7 @@ const content = {
     experienceTitle: 'Experience',
     experience: [
       {
-        title: 'SARI Teknologi',
+        title: 'PT SARI Teknologi',
         position: 'Search Engine Optimization Team Lead',
         year: 'Feb 2022 - Jul 2022',
         location: 'Jakarta Barat, Jakarta Raya, Indonesia',
@@ -346,7 +346,7 @@ const content = {
     experienceTitle: 'Pengalaman',
     experience: [
       {
-        title: 'SARI Teknologi',
+        title: 'PT SARI Teknologi',
         position: 'Search Engine Optimization Team Lead (Internship)',
         year: 'Feb 2022 - Jul 2022',
         location: 'Jakarta Barat, DKI Jakarta, Indonesia',
