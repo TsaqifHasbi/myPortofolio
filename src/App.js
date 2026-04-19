@@ -108,7 +108,7 @@ const content = {
       },
       {
         title: 'Jenderal Soedirman University',
-        position: 'Data Structure Laboratory Assistant Informatics 2025',
+        position: 'Data Structure Laboratory Assistant Informatics 2026',
         year: 'Mar 2025 - Jun 2025',
         location: 'Purbalingga, Jawa Tengah, Indonesia',
         description: 'As a Data Structure Laboratory Assistant, I assisted faculty instructors in conducting practicum and guided students in understanding basic concepts and implementation of data structures using programming languages.',
@@ -895,7 +895,7 @@ function App() {
       <section className="experience-section" id="experience">
         <div className="container">
           <h3 className="section-title">{t.experienceTitle}</h3>
-          
+
           {/* Desktop: Timeline Layout */}
           <div className="experience-timeline desktop-only">
             {t.experience.map((exp, idx) => (
@@ -911,7 +911,7 @@ function App() {
                   <h5 className="experience-position">{exp.position}</h5>
                   <div className="experience-location">{exp.location}</div>
                   <p className="experience-description">{exp.description}</p>
-                  
+
                   <div className={`experience-expanded-content ${expandedExp[idx] ? 'expanded' : 'collapsed'}`}>
                     <div className="experience-achievements">
                       <h6>{lang === 'id' ? 'Pencapaian Utama:' : 'Key Achievements:'}</h6>
@@ -930,10 +930,10 @@ function App() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <button className="read-more-btn" onClick={() => toggleExpand(idx)}>
-                    {expandedExp[idx] 
-                      ? (lang === 'id' ? 'Tutup' : 'Show Less') 
+                    {expandedExp[idx]
+                      ? (lang === 'id' ? 'Tutup' : 'Show Less')
                       : (lang === 'id' ? 'Selengkapnya' : 'Read More')}
                     {expandedExp[idx] ? <FaChevronUp /> : <FaChevronDown />}
                   </button>
