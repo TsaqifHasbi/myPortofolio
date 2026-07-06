@@ -25,7 +25,8 @@ import {
   FaJsSquare,
   FaTimes,
   FaChevronDown,
-  FaChevronUp
+  FaChevronUp,
+  FaExternalLinkAlt
 } from 'react-icons/fa';
 
 const content = {
@@ -1179,6 +1180,17 @@ function App() {
                 </div>
               </div>
             ))}
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2.5rem' }}>
+            <a
+              href="https://drive.google.com/drive/folders/1aVEYl_5CwS9eAAMfHkDGsdrn1BCQwJzw?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="view-more-certs-btn"
+            >
+              <FaExternalLinkAlt style={{ marginRight: '0.5rem' }} />
+              {lang === 'id' ? 'Lihat Sertifikat Lain' : 'View Other Certificates'}
+            </a>
           </div>
         </div>
       </section>
